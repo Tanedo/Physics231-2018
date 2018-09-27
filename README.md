@@ -49,6 +49,62 @@ It may be useful to refer to [last year's course notes](https://github.com/Taned
 2. [Short Homework]()  
 	[Long homework ]()  
 
+## Talk Schedule
+
+Topics to be assigned and discussed in our meetings. The order was determined using `random.org` and then the undergrads were rearranged to talk first.
+
+* **Wed, Oct 10**:
+Kyle Perez, 
+Sergio Garcia, 
+Thomas Waddleton, 
+Christopher Cain, 
+John Lee.
+
+* **Wed, Oct 17**:
+Michael Worcester,
+Shirash Regmi,
+Medhanie Estiphanos,
+Mehmet Kilinc,
+Cameron Racz
+
+* **Wed, Oct 24**:
+Ao Shi,
+Ian Cadenhead,
+Linke Xie,
+Elizabeth Finney,
+Ming-Feng Ho
+
+* **Wed, Oct 31**:
+Mehrdad Phoroutan Mehr,
+Alexander Mercaldi,
+Brian Lee,
+Mahdi Qezlou,
+Mingda Guo
+
+* **Wed, Nov 7**:
+Meng Hou,
+Yongda Zhu,
+Jackson Kishbaugh-Maish,
+Robert Dawson
+
+* **Wed, Nov 14**:
+Xilin Liang,
+Michael Gordon,
+Chen Wang,
+William Baker
+
+* **Wed, Nov 21**:
+Nakul Gangolli,
+Shixiong Wang,
+Cameron Chevalier,
+Jonathan Turner
+
+* **Wed, Nov 28**:
+Varrick Suezaki,
+Yifan Liu,
+Erik Loyd,
+Zahra Sattari
+
 ## Evaluation
 
 Five homework assignments (two parts each) will be assigned every *other* Monday. These will consist of a **short homework** (5 points, due the following Wednesday) and a **long homework** (20+ points, due in 2 weeks). 
