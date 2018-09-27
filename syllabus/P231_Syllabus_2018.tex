@@ -1,0 +1,283 @@
+\documentclass[12pt]{article}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  THE USUAL PACKAGES  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{nopageno}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  UNUSUAL PACKAGES        %%%%
+%%%  Uncomment as necessary. %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% MATH AND PHYSICS SYMBOLS
+%% ------------------------
+%\usepackage{slashed}       % \slashed{k}
+%\usepackage{mathrsfs}      % Weinberg-esque letters
+%\usepackage{youngtab}	    % Young Tableaux
+%\usepackage{pifont}        % check marks
+%\usepackage{bbm}           % \mathbbm{1} incomp. w/ XeLaTeX 
+%\usepackage[normalem]{ulem} % for \sout
+
+
+%% CONTENT FORMAT AND DESIGN (below for general formatting)
+%% --------------------------------------------------------
+\usepackage{lipsum}        % block of text (formatting test)
+%\usepackage{color}         % \color{...}, colored text
+%\usepackage{framed}        % boxed remarks
+%\usepackage{subcaption}    % subfigures; subfig depreciated
+%\usepackage{paralist}      % compactitem
+%\usepackage{appendix}      % subappendices
+%\usepackage{cite}          % group cites (conflict: collref)
+%\usepackage{tocloft}       % Table of Contents	
+\usepackage{wrapfig}		% text wrap
+
+%% TABLES IN LaTeX
+%% ---------------
+%\usepackage{booktabs}      % professional tables
+%\usepackage{nicefrac}      % fractions in tables,
+\usepackage{multirow}      % multirow elements in a table
+%\usepackage{arydshln} 	    % dashed lines in arrays
+
+%% Other Packages and Notes
+%% ------------------------
+%\usepackage[font=small]{caption} % caption font is small
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  PAGE FORMATTING and (RE)NEW COMMANDS  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[margin=2cm]{geometry}   % reasonable margins
+
+\graphicspath{{figures/}}	        % set directory for figures
+
+% for capitalized things
+\newcommand{\acro}[1]{\textsc{\MakeLowercase{#1}}}    
+
+\numberwithin{equation}{section}    % set equation numbering
+\renewcommand{\tilde}{\widetilde}   % tilde over characters
+\renewcommand{\vec}[1]{\mathbf{#1}} % vectors are boldface
+
+\newcommand{\dbar}{d\mkern-6mu\mathchar'26}    % for d/2pi
+\newcommand{\ket}[1]{\left|#1\right\rangle}    % <#1|
+\newcommand{\bra}[1]{\left\langle#1\right|}    % |#1>
+\newcommand{\Xmark}{\text{\sffamily X}}        % cross out
+
+% Change list spacing (instead of package paralist)
+% from: http://en.wikibooks.org/wiki/LaTeX/List_Structures#Line_spacing
+\let\oldenumerate\enumerate
+\renewcommand{\enumerate}{
+  \oldenumerate
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+  \olditemize
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+
+% Commands for temporary comments
+\newcommand{\comment}[2]{\textcolor{red}{[\textbf{#1} #2]}}
+\newcommand{\flip}[1]{{\color{red} [\textbf{Flip}: {#1}]}}
+\newcommand{\email}[1]{\texttt{\href{mailto:#1}{#1}}}
+
+\newenvironment{institutions}[1][2em]{\begin{list}{}{\setlength\leftmargin{#1}\setlength\rightmargin{#1}}\item[]}{\end{list}}
+
+
+\usepackage{fancyhdr}		% to put preprint number
+
+
+
+% Commands for listings package
+%\usepackage{listings}      % \begin{lstlisting}, for code
+%
+% \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
+%    sets style to small true-type
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  TIKZ COMMANDS FOR EXTERNAL DIAGRAMS  %%%%
+%%%  requires -shell-escape               %%%%
+%%%  in texpad 1.7: prefs > shell esc sec %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% This is for exporting tikz figures as into a ./tikz/ subfolder.
+%% It is useful if you want pdf versions of the tikz diagrams or
+%% if you need to speed up compilation of a large document with
+%% many tikz diagrams.
+
+%\write18{} % Careful with this!
+%\usetikzlibrary{external}
+%\tikzexternalize[prefix=tikz/] % folder for external pdfs
+
+
+%%%%%%%%%%%%%%%%%%%
+%%%  HYPERREF  %%%%
+%%%%%%%%%%%%%%%%%%%
+
+%% This package has to be at the end; can lead to conflicts
+\usepackage{microtype}
+\usepackage[
+	colorlinks=true,
+	citecolor=black,
+	linkcolor=black,
+	urlcolor=green!50!black,
+	hypertexnames=false]{hyperref}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%  TITLE DATA  %%%%
+%%%%%%%%%%%%%%%%%%%%%
+
+%%% PREPRINT NUMBER USING fancyhdr
+%%% Don't forget to set \thispagestyle{firststyle}
+%%% ----------------------------------------------
+%\renewcommand{\headrulewidth}{0pt} % no separator
+%\fancypagestyle{firststyle}{
+%\rhead{\footnotesize \texttt{UCI-TR-2016-XX}}}
+
+
+
+\begin{document}
+
+%\thispagestyle{empty}
+%\thispagestyle{firststyle} %% to include preprint
+
+\begin{center}
+
+    {\Large \textsc{Physics 231:} \textbf{Methods of Theoretical Physics}}
+    
+\end{center}
+
+\vskip .4cm
+
+\noindent
+\begin{tabular*}{\textwidth}{rlcrll}
+	\textsc{Instructor:}& Flip Tanedo (Phys.~3054)
+	&
+	\hspace{1.2cm}
+	&
+	\textsc{Meet:} & MWF & 10:10 -- 11am (Chung 139)
+	\\
+	\textsc{Contact:}& \email{flip.tanedo@ucr.edu} 
+	&
+	\hfill
+	&
+	\textsc{}& M & 3:10 -- 4pm (Phys.~3035)
+	\\
+	\textsc{TA:}&  \multicolumn{3}{l}{Ian Chaffey (\email{ichaf001@ucr.edu})}
+%	&
+%	\hfill
+%	&
+%	& % \multicolumn{2}{l}{We will use both slots}
+\end{tabular*}
+
+
+
+
+\subsection*{Critical Information}
+\begin{wrapfigure}{r}{0.2\textwidth}\centering
+	\vspace{-40pt}
+    \includegraphics[scale=0.4]{p2312018.png}
+    \vspace{-50pt}
+\end{wrapfigure}
+\textsc{webpage:} \url{https://tanedo.github.io/Physics231-2018/}
+
+\noindent Lecture notes, homework and our course calendar are posted there. Internal material may be posted to \texttt{iLearn}. 
+
+\vspace{.5em}
+\noindent \emph{Please check the course calendar, some days will not be used.}
+
+\vspace{.5em}
+\noindent We will use the designated lecture \emph{and} discussion slots as meeting times. 
+
+
+\subsection*{Unofficial Course Description}
+
+
+This is a crash course in (a) mathematical methods for physics and (b) necessary science communication for your Ph.D. The topics are selected to be useful in your graduate coursework and research. This is not a mathematics course, it is \emph{boot camp} for physicists. 
+
+\vspace{.5em}
+\noindent\emph{Why communication?} Two common `failure modes' of early career scientists are the inability to \begin{itemize}
+	\item \emph{write} clear papers, fellowship/grant proposals, (non-)academic job applications
+	\item \emph{speak} their research to different audiences.
+\end{itemize} 
+These skills can make or break an academic career, even though they are never formally taught. 
+
+\subsection*{Evaluation}
+
+Five homework assignments will be assigned every other Monday.
+\begin{itemize}
+	\item \textbf{Short homework} [5 pts] due the following Wednesday.\\ 
+		Quick reminders of key points in lecture, feedback on topics that may not be familiar.
+	\item \textbf{Long homework} [20 pts+] due in 2 weeks.\\ 
+		More detailed calculations, some short writing component. Optional `extra credit' problems.
+\end{itemize}
+\noindent
+Each student will give \textbf{one five minute talk} [25 pts] during the course of the quarter. The focus of the talk changes depending on the week. Periodic in-class assessment in the form of \textbf{index cards} [1 point] will be used to help me tailor the couse trajectory. No exams. I expect you to \emph{work together} and to abide by the \href{http://conduct.ucr.edu/policies/academicintegrity.html}{UCR academic integrity policies}.
+
+
+\subsection*{Textbook}
+
+The \emph{suggested} textbook is \emph{Mathematics for Physics \& Physicists} by Appel (\textsc{isbn}: 9780691131023). You are free to use whatever mathematical physics references you are most comfortable with. Some suggestions are on the course webpage.
+
+\section*{Topics}
+
+The main theme of the course will be understanding how to solve the partial differential equations that pop up in physics using Green's functions. 
+
+\begin{enumerate}
+	\item \textbf{Dimensional analysis}. [1 week] How do you tell a physicist from a mathematician?
+	\item \textbf{Differential equations}. [2 weeks] Are differential equations just linear algebra?
+	\item \textbf{Complex Analysis}. [1 week] How do I integrate around poles?
+	\item \textbf{Green's functions}. [4 weeks] How do I solve differential equations? %This is the core of a `standard' math methods core. 
+	\item \textbf{Special Topics}. [3 weeks]  Special topics to be decided. Possibilities include: probability and statistics (how do you know when you've discovered something?), statistical learning (what is machine learning?), differential geometry (what is a magnetic monopole?).
+\end{enumerate}
+
+\section*{Learning Objectives}
+
+By the end of this course, you are expected to attain the following learning outcomes:
+\begin{enumerate}
+	\item Use dimensional analysis to determine scaling relations.
+	\item Understand linear differential operators as infinite dimensional matrices
+	\item Understand Green's functions as inverse operators
+	\item Express Green's functions in terms of eigenfunctions of the differential operator
+	\item Solve for Green's functions using integral transforms
+	\item Be able to solve simple contour integrals
+	\item Use contour integrals to solve for Green's functions of common operators
+	\item Understand the physical consequences of analyticity (e.g. dispersion)
+	\item Be able to apply Green's function methods to problems in electrodynamics
+	\item Understand quantum mechanics as an infinite dimensional vector space
+	\item Understand the basics of frequentist and Bayesian inference
+	\item Be able to use likelihood to determine the significance of experimental results
+	\item Understand the statistical foundations of statistical mechanics
+	\item Understand how to solve differential equations numerically
+\end{enumerate}
+Additionally, following soft skills will be emphasized:
+\begin{enumerate}
+	\item How to write an academic research/personal statement.
+	\item How to give a brief talk targeted to different types of audiences.
+	\item How to ask questions in an academic setting.
+	\item How to answer questions in an academic setting. 
+\end{enumerate}
+
+
+
+\end{document}
