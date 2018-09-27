@@ -25,7 +25,7 @@ This is a crash course in (a) mathematical methods for physics and (b) necessary
 
 ## Textbook
 
-There is no required textbook, though I particularly l ike *Mathematics for Physics & Physicists* by Appel (ISBN: 9780691131023). 
+There is no required textbook, though I particularly like [*Mathematics for Physics & Physicists*](https://press.princeton.edu/titles/8452.html) by Appel (ISBN: 9780691131023). 
 
 I strongly recommended that you have access to at least one general "math methods for physicists" reference. If you have a favorite one from undergrad, you may use that (e.g. Arfken & Weber or Boas). The book by Byron and Fuller is a solid choice and is inexpensive as a Dover edition. You can also find many free digital references through the UCR library.
 
