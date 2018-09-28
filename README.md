@@ -35,11 +35,11 @@ I strongly recommended that you have access to at least one general "math method
 
 * [*Mathematical Physics: a Modern Introduction to its Foundations*](http://scotty.ucr.edu/record=b4477256~S5), Sadri Hassani; digital version free from UCR Library.
 
-* [*Statistics: A Guide to the Use of Statistical Methods in the Physical Sciences*](http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471922951.html), Barlow; if we do statisticsl.
+* [*Statistics: A Guide to the Use of Statistical Methods in the Physical Sciences*](http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471922951.html), Barlow; if we do statistics.
 
 If you find references that you really like, please feel free to e-mail me to share them. (Bonus: make a GitHub pull request to add it to the list.)
 
-It may be useful to refer to [last year's course notes](https://github.com/Tanedo/P231-2017).
+It may be useful to refer to [last year's course notes](https://github.com/Tanedo/P231-2017). The [2016 version if this course](https://github.com/Tanedo/P231-2016) was more [differential] geometric, though also more prone to have errors.
 
 ## Homework
 
