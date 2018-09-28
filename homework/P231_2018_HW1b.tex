@@ -1,0 +1,270 @@
+\documentclass[12pt]{article}
+%% arXiv paper template by Flip Tanedo
+%% last updated: Dec 2016
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  THE USUAL PACKAGES  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{nopageno}
+\usepackage{enumerate}
+\usepackage{parskip}
+\usepackage{tikzfeynman}
+
+
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  PAGE FORMATTING and (RE)NEW COMMANDS  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[margin=2cm]{geometry}   % reasonable margins
+
+\graphicspath{{figures/}}	        % set directory for figures
+
+% for capitalized things
+\newcommand{\acro}[1]{\textsc{\MakeLowercase{#1}}}    
+
+\numberwithin{equation}{subsection}    % set equation numbering
+\renewcommand{\tilde}{\widetilde}   % tilde over characters
+\renewcommand{\vec}[1]{\mathbf{#1}} % vectors are boldface
+
+\newcommand{\dbar}{d\mkern-6mu\mathchar'26}    % for d/2pi
+\newcommand{\ket}[1]{\left|#1\right\rangle}    % <#1|
+\newcommand{\bra}[1]{\left\langle#1\right|}    % |#1>
+\newcommand{\Xmark}{\text{\sffamily X}}        % cross out
+
+
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+  \olditemize
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+
+% Commands for temporary comments
+\newcommand{\comment}[2]{\textcolor{red}{[\textbf{#1} #2]}}
+\newcommand{\flip}[1]{{\color{red} [\textbf{Flip}: {#1}]}}
+\newcommand{\email}[1]{\texttt{\href{mailto:#1}{#1}}}
+
+\newenvironment{institutions}[1][2em]{\begin{list}{}{\setlength\leftmargin{#1}\setlength\rightmargin{#1}}\item[]}{\end{list}}
+
+
+\usepackage{fancyhdr}		% to put preprint number
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%%%  HYPERREF  %%%%
+%%%%%%%%%%%%%%%%%%%
+
+%% This package has to be at the end; can lead to conflicts
+\usepackage{microtype}
+\usepackage[
+	colorlinks=true,
+	citecolor=black,
+	linkcolor=black,
+	urlcolor=green!50!black,
+	hypertexnames=false]{hyperref}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%  TITLE DATA  %%%%
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+
+    {\Large \textsc{Homework 1b:} 
+    \textbf{Linear Algebra}}
+    
+\end{center}
+
+\vskip .4cm
+
+\noindent
+\begin{tabular*}{\textwidth}{rlcrll}
+	\textsc{Course:}& Physics 231, \emph{Methods of Theoretical Physics} (2018)
+	&
+%	\hspace{1.2cm}
+	&
+	\\
+	\textsc{Instructor:}& Professor Flip Tanedo (\email{flip.tanedo@ucr.edu})
+	&
+	%\hfill
+	&
+	& 
+	\\
+	\textsc{Due by:}& Mon, October 15
+	&
+	%\hfill
+	&
+	%	
+\end{tabular*}
+
+
+\subsection{Dimensional Analysis: explosive energy} 
+
+
+Suppose a large amount of energy is released in a small volume. This explosion produces a spherical shock wave where there is a sharp increase in air pressure. How does the characteristic size of the shock wave depend on time? Start by identifying the three relevant parameters for the problem and giving their dimensions in $L^\alpha M^\beta T^\gamma$ form. If you're stuck, see ``The Formation of a Blast Wave by a Very Intense Explosions''  by Geoffrey Taylor\footnote{\url{http://www.jstor.org/stable/98395}}.
+
+
+\subsection{Discretized Second Derivatives}
+
+\begin{enumerate}[(a)]
+	\item Show that the discretized second derivative $D^2$ is written in matrix notation as
+\begin{align}
+	\left(D^2\right)^i_{\phantom{i}j}
+	&= 
+	\frac{1}{\Delta x^2}
+	\left(
+	\delta_j^{(i-1)}
+	- 2 \delta_j^{i}
+	+
+	\delta_j^{(i+1)}
+	\right) \ .
+	\label{eq:D2}
+\end{align}
+Specifically: if you have a continuous function $f(x)$ over some interval $[x_1, x_N]$. Break up the interval by defining $x_i = x_1 + (i-1)\Delta x$ with $\Delta x$ appropriately chosen. You can define a vector
+\begin{align}
+	\vec{f} = (f^1, f^2, f^3, \cdots, f^N)^T
+\end{align}
+where $f^i = f(x_i)$. Show that (\ref{eq:D2}) is the matrix representation of the second derivative acting on $\vec{f}$. 
+
+\textsc{Comment}: I will use $f^i$ to refer to particular component of $\vec{f}$ and  sometimes to also refer to the entire vectors, $\vec{f}$. Mathematicians hate me.
+
+\item The above form is correct \emph{except} for the inclusion of boundary conditions. For \textbf{Dirichlet} boundary conditions, we could say that $f^0 = f^{N+1} = 0$ and instead focus on the components $\left(f^1, \cdots, f^N\right)^T$. 
+
+Now consider the case of \textbf{periodic} boundary conditions. This means that if you travel past one edge of the domain, you end up back at the opposite edge\footnote{Classic examples of periodic boundary conditions are \emph{Pacman} and \emph{Asteroids}. If you are not familiar with those classic video games, then be content that youth is wasted on the young.}.
+
+Following the Dirichlet case, you may introduce fictitious `boundary' coordinates $f^0$ and $f^{N+1}$. What are these fixed to be? Write out what the $D^2$ matrix looks like for periodic conditions. Contrast this to the Dirichlet case.
+
+\textsc{Comment}: observe that one of the key features of periodic boundary conditions is that there is no `special' location: there are effectively \emph{no} boundaries. This is why we like to use periodic boundary conditions when we do numerical simulations of large (potentially infinite) systems: we don't want the edges of our simulation to effect the bulk behavior, so we choose boundary conditions with no edges.
+
+\textsc{Comment}: Recall from quantum mechanics that Hermiticity (self-adjoint-ness) is really important if you want real eigenvalues. Observe that the matrix representations of $D^2$ in this problem are both self-adjoint/Hermitian. 
+
+
+
+\end{enumerate}
+
+
+
+\subsection{1D model of a molecule}
+
+Consider the following \emph{spherical cow}\footnote{\url{https://en.wikipedia.org/wiki/Spherical_cow}} model of a water molecule (H$_2$O): imagine three point masses connected to each other by springs representing the atomic forces within the molecule. For this model, the point masses and springs are constrained to lie on a rigid hoop so that the problem is one dimensional. 
+
+\begin{center}
+	\begin{tikzpicture}[line width=1.5 pt, scale=1]
+		%
+		\draw[gluon] (235:1) arc (235:125:1);
+		\draw[gluon] (115:1) arc (115:5:1);
+		\draw[gluon] (-5:1) arc (-5:-115:1);
+		\draw[fill=black] (240:1) circle (.1);
+		\draw[fill=black] (120:1) circle (.1);
+		\draw[fill=black] (0:1) circle (.1);
+		\node at (240:1.5) {$m_1$};
+		\node at (120:1.5) {$m_2$};
+		\node at (0:1.5) {$m_3$};
+		\draw[<->, line width=1 pt] (225:1.5) arc (225:135:1.5);
+		\draw[<->, line width=1 pt] (105:1.5) arc (105:15:1.5);
+		\draw[<->, line width=1 pt] (-15:1.5) arc (-15:-105:1.5);
+		\node at (60:2) {$x_{2}$};
+		\node at (180:2) {$x_{1}$};
+		\node at (300:2) {$x_{3}$};
+	\end{tikzpicture}
+\end{center}
+
+For simplicity, assume that all of the masses and spring constants are the same,
+\begin{align}
+	m_i &= m & k_i &= k 
+	&
+	\text{for } i=1,2,3 
+	\ .
+\end{align}
+
+\begin{enumerate}[(a)]
+	\item Denote by $x$ the distance along the hoop. This is essentially an angular variable. Let $\vec{x} = (x^i, x^2, x^3)$ be a vector of positions along the hoop. The spring forces acting on mass $2$, for example, depends on $x_1$ and $x_2$. Using Hooke's law, write down the equation of motion in the following form:
+\begin{align}
+	\ddot{\vec{x}} &= V \vec{x} \ .
+	\label{eq:eom}
+\end{align}
+Explicitly write the components of $V$ as a $3\times 3$ matrix in this basis.
+
+	\item 
+\emph{This is the important part of the problem.}
+Diagonalize $V$, identify the eigenvalues $\omega_i$ and eigenvectors $\vec{v}_i$. We refer to the set of eigenvalues as the \textbf{spectrum} of $V$. What is the physical interpretation of the spectrum? Draw a cartoon showing how each node `hoop molecule' moves with respect to the lowest eigenvector. 
+
+\textsc{Comment}: Diagonalizing matrices is tedious. Make sure you know how to do it. If you must, you can \emph{Mathematica} to do it for you---but you should feel a little bit embarrassed if you do. 
+
+\item 
+\emph{This is the tedious part of the problem so that you can write down ``equations 'n stuff.''}
+Solve the eigenvalue problem in the $\left\{ \vec{v}_i\right \}$ basis. In this basis (\ref{eq:eom}) is simple to solve, right? Write down the general solution of the problem in the $\left\{ \vec{x}_i\right \}$ basis as a function of the initial positions and velocities in the system.  (If I were to choose to sacrifice a point for skipping a part of a problem, I would choose this sub-problem. But I'd make sure I understood how to do it.)
+
+\end{enumerate}
+
+\textsc{Comment}: I encourage you to think about how problem changes if the masses and spring constants are not degenerate. 
+
+\textsc{Comment}: You may enjoy reading a similar ``bead on a hoop with springs'' set up in \url{https://arxiv.org/abs/physics/0506195}. The paper discusses how the classical system exhibits what we call \textbf{critical behavior}\footnote{See, e.g.: \url{https://www.perimeterinstitute.ca/videos/conformal-bootstrap-magnets-boiling-water}}.
+
+
+
+\section{Extra Credit}
+
+These problems are not graded and are for your edification. You are strongly encouraged to explore and discuss these topics, especially if they are in a field of interest to you.
+
+\subsection{Error Estimates of High School Physics}
+
+Use dimensional analysis to estimate the error on a simple high school physics calculation. To zeroth order (`high school order'). We would like to calculate the time it takes for an object to reach the ground after being dropped from rest at height $h$. Assume everything is human scale and on the surface of the Earth. The zeroth order solution is $t_0 = \sqrt{2h/g}$. Estimate the size of the correction from special relativity. If you need a hint, this problem came from ``Dimensional analysis, falling bodies, and the fine art of not solving differential equations'' by Craig Bohren\footnote{\emph{Am. J. Phys.} \textbf{72}  4 , April 2004 \url{http://dx.doi.org/10.1119/1.1574042}}. 
+
+\subsection{Natural Units}
+
+In high energy physics one typically works in \textbf{natural units} where we work only in mass dimension\footnote{Actually, we work in dimensions of energy. Remind yourself of how energy and mass are related dimensionally.}, $[Q] = M^\beta$. High energy physicists are lazy, so they prefer to just write $[Q]=\beta$. Thus the mass of the electron has dimension $[m_e] = 1$. 
+
+This `gets rid' of the length and time dimensions. In order to do this \emph{without} throwing away information, one uses `universal constants' to convert between length/time and mass. Fortunately, nature provides us with such constants: the speed of light, $c$, and Planck's constant, $\hbar = h/2\pi$. When using natural units, experts often just say that we impose the following curious conditions:
+\begin{align}
+	c &= 1 
+	&
+	\hbar = 1 \ .
+\end{align}
+This looks completely wrong from dimensional analysis. What gives?
+
+\begin{enumerate}[(a)]
+	\item First, get a sense of the numbers involved. Write out the numerical values of $c$ and $\hbar$ in cgs (centimeters, grams, seconds) units. Don't use more than 2 significant figures, that's just showing off. 
+	\item Suppose I have some quantity $Q$ with dimension $[Q] = L^\alpha M^\beta T^\gamma$ for some numbers $\alpha$, $\beta$, $\gamma$. What natural units is really saying is that we want to work with a different set of dimensions: energy $E$, $c$, and $\hbar$:
+		\begin{align*}
+			[Q] = E^x c^y \hbar^z .
+		\end{align*}
+		Find the values of $x$, $y$, and $z$ as a function of $\alpha$, $\beta$, $\gamma$.
+	\item When a high energy physicist says that $[Q]$ has dimension $x$ in natural units, what they really mean is that $[Q] = E^x c^y \hbar^z$ for some $y$ and $z$. For a such a quantity, you already know what the `ordinary' dimensions are so that you can multiply by the appropriate powers of $c$ and $\hbar$ to get the number in any other units. For example, the mass of the proton $m_p$ is 1~GeV, where GeV is a unit of energy. We say that $[m_p] = 1$ in natural units. What are the values of $x$ and $y$? Convert 1~GeV into grams.
+	\item Repeat problem 1 of Homework 1a in natural units.
+	\item Convert the electron mass $m_e = 0.5$~MeV into a length. What does this length correspond to? (Think about what the possibilities are from quantum mechanics, check your answer.)
+	\item Explain the following poetic statement: ``high-energy colliders are microscopes.''
+\end{enumerate}
+
+
+\subsection{Extra Credit: A 2D Model of a Molecule}
+
+
+Consider the molecular model in Problem 3, except now the system is not constrained to live on a hoop. Instead, the three masses are free to move on a two-dimensional plane with springs connecting them to one another. This is a slightly more realistic model of the water molecule. 
+
+What is the dimensionality of the configuration space? In other words, if we write $\vec{x} = x^i \left|\vec{e}_i\right\rangle$, what is the range of $i$? Set up and solve the problem. Feel free to use \emph{Mathematica}'s \texttt{Eigensystem} function. Without doing any work, what is the interpretation of the eigenvectors with the lowest eigenvalue? What types of motion do these eigenvectors describe? You should be able to answer this without even doing any work on the problem.
+
+\emph{Important comment}: This system exhibits $S_3$ permutation symmetry. The tools of representation theory (group theory) then allow one figure out the main features of the problem without doing any heavy lifting. A tool called \textbf{Schur's Lemma} (which sounds fancy, but is something you know intuitively in quantum mechanics) tells you how many different eigenvalues there are and the number of states with those eigenvalues. 
+
+
+
+
+
+\end{document}
