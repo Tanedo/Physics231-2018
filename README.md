@@ -114,4 +114,8 @@ In addition, each students will give one **five minute talk** (25 points) over t
 
 I *strongly* encourage you to work together. Please abide by the [UCR Academic Integrity Policies](http://conduct.ucr.edu/policies/academicintegrity.html).
 
-## Lecture Notes
+## "Lecture" Notes
+
+These notes are provided *as is* and may have errors. They also do *not* include the questions and discussions from class. The most meaningful parts of this class (like grad school as a whole) will be unscripted.
+
+* [Meeting 01](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec01.pdf): Welcome, dimensional Analysis. **Index Card**: (1) What should I know about you? (2) How do you learn?
