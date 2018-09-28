@@ -43,8 +43,8 @@ It may be useful to refer to [last year's course notes](https://github.com/Taned
 
 ## Homework
 
-1. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1a.pdf) due Wed, Oct 3  
-	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1b.pdf) due Mon, Oct 15  
+1. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1a.pdf) due Wed, Oct 3: dimensional analysis  
+	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1b.pdf) due Mon, Oct 15: linear algebra  
 	
 <!--2. [Short Homework]()  
 	[Long homework ]()  
@@ -85,7 +85,8 @@ Mingda Guo
 Meng Hou,
 Yongda Zhu,
 Jackson Kishbaugh-Maish,
-Robert Dawson
+Robert Dawson,
+Adam Green
 
 * **Wed, Nov 14**:
 Xilin Liang,
@@ -112,3 +113,5 @@ Five homework assignments (two parts each) will be assigned every *other* Monday
 In addition, each students will give one **five minute talk** (25 points) over the course of the quarter. Periodic in-class assessments in the form of **index cards** (1 point) will help me tailor the course trajectory as we go. There will be *no exams*. 
 
 I *strongly* encourage you to work together. Please abide by the [UCR Academic Integrity Policies](http://conduct.ucr.edu/policies/academicintegrity.html).
+
+## Lecture Notes
