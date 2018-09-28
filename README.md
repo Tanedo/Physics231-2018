@@ -44,7 +44,7 @@ It may be useful to refer to [last year's course notes](https://github.com/Taned
 ## Homework
 
 1. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1a.pdf) due Wed, Oct 3  
-	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1b.pdf) due Mon, Oct 15
+	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1b.pdf) due Mon, Oct 15  
 	
 <!--2. [Short Homework]()  
 	[Long homework ]()  
