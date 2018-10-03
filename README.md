@@ -35,6 +35,10 @@ I strongly recommended that you have access to at least one general "math method
 
 * [*Mathematical Physics: a Modern Introduction to its Foundations*](http://scotty.ucr.edu/record=b4477256~S5), Sadri Hassani; digital version free from UCR Library.
 
+* [*Mathematics of Classical and Quantum Physics*](http://store.doverpublications.com/048667164x.html),  Byron and Fuller
+
+* [* Mathematical Methods of Physics*](https://www.pearson.com/us/higher-education/program/Mathews-Mathematical-Methods-of-Physics-2nd-Edition/PGM138979.html), Mathews and Walker
+
 * [*Statistics: A Guide to the Use of Statistical Methods in the Physical Sciences*](http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471922951.html), Barlow; if we do statistics.
 
 If you find references that you really like, please feel free to e-mail me to share them. (Bonus: make a GitHub pull request to add it to the list.)
@@ -122,4 +126,4 @@ These notes are provided *as is* and may have errors. They also do *not* include
 
 * [Meeting 02-03](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec02-03.pdf): Scaling, error analysis with dimensional analysis. Discretized functions as vector spaces, derivatives as linear operators. **Suggested reading:** *[Linear Algebra Done Right](https://link.springer.com/book/10.1007/978-3-319-11080-6)*, Axler. First few chapters as needed. You can access the book through the library when you're on the UCR network. If you're off-campus, you can use the [UCR VPN](http://cnc.ucr.edu/vpn/).
 
-* [Meeting 04](): TBA. 
+* [Meeting 04](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec04.pdf): HW1b question and answer session. Discretized functions review. **Index Card**: How will you be evaluated after your PhD? **Suggested reading:** The books by Byron and Fuller, Mathews and Walker cover this type of materials. You will also find problems similar to our model of a molecule in Howard Georgi's [waves lecture notes](http://www.people.fas.harvard.edu/~hgeorgi/onenew.pdf). This line of thought led to ideas like [dimensional deconstruction](https://en.wikipedia.org/wiki/Dimensional_deconstruction). 
