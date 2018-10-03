@@ -120,4 +120,6 @@ These notes are provided *as is* and may have errors. They also do *not* include
 
 * [Meeting 01](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec01.pdf): Welcome, dimensional Analysis. **Index Card**: (1) What should I know about you? (2) How do you learn?
 
-* [Meeting 02-03](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec01.pdf): Welcome, dimensional Analysis. **Index Card**: (1) What should I know about you? (2) How do you learn?
+* [Meeting 02-03](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec02-03.pdf): Scaling, error analysis with dimensional analysis. Discretized functions as vector spaces, derivatives as linear operators. **Suggested reading:** *[Linear Algebra Done Right](https://link.springer.com/book/10.1007/978-3-319-11080-6)*, Axler. First few chapters as needed. You can access the book through the library when you're on the UCR network. If you're off-campus, you can use the [UCR VPN](http://cnc.ucr.edu/vpn/).
+
+* [Meeting 04](): TBA. 
