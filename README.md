@@ -57,12 +57,12 @@ It may be useful to refer to [last year's course notes](https://github.com/Taned
 
 Topics to be assigned and discussed in our meetings. The order was determined using `random.org` and then the undergrads were rearranged to talk first.
 
-* **Wed, Oct 10**:
-Kyle Perez, 
-Sergio Garcia, 
-Thomas Waddleton, 
-Christopher Cain, 
-John Lee.
+* **Wed, Oct 10**:  
+Kyle Perez: HW1b, extra credit 2(f).  
+Sergio Garcia: My summer research.   
+Thomas Waddleton: HW1b, Problem 1.   
+Christopher Cain: Interpreting HW1b, Problem 3.    
+John Lee: Explain HW1b eq (2.1), discuss boundary conditions.  
 
 * **Wed, Oct 17**:
 Michael Worcester,
