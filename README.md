@@ -1,8 +1,9 @@
 # Methods of Theoretical Physics
 
 Physics 231, Fall 2018  
-Prof. [Flip Tanedo](http://physics.ucr.edu/~flip/)  
-TA. Ian Chaffey
+Prof. [Flip Tanedo](http://physics.ucr.edu/~flip/); office hours by appt.  
+TA. Ian Chaffey; office hours Tue 1-3pm (Physics 3004S)
+
 
 [Syllabus](https://github.com/Tanedo/Physics231-2018/blob/master/syllabus/P231_Syllabus_2018.pdf)
 
