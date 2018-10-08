@@ -50,6 +50,10 @@ It may be useful to refer to [last year's course notes](https://github.com/Taned
 
 1. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1a.pdf) due Wed, Oct 3: dimensional analysis  
 	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1b.pdf) due Mon, Oct 15: linear algebra  
+
+<!--2. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2a.pdf) due Wed, Oct 17: Green's Function Primer
+	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2b.pdf) due Mon, Oct 29: What's a Green's Function-->
+
 	
 <!--2. [Short Homework]()  
 	[Long homework ]()  
@@ -128,3 +132,7 @@ These notes are provided *as is* and may have errors. They also do *not* include
 * [Meeting 02-03](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec02-03.pdf): Scaling, error analysis with dimensional analysis. Discretized functions as vector spaces, derivatives as linear operators. **Suggested reading:** *[Linear Algebra Done Right](https://link.springer.com/book/10.1007/978-3-319-11080-6)*, Axler. First few chapters as needed. You can access the book through the library when you're on the UCR network. If you're off-campus, you can use the [UCR VPN](http://cnc.ucr.edu/vpn/).
 
 * [Meeting 04](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec04.pdf): HW1b question and answer session. Discretized functions review. **Index Card**: How will you be evaluated after your PhD? **Suggested reading:** The books by Byron and Fuller, Mathews and Walker cover this type of materials. You will also find problems similar to our model of a molecule in Howard Georgi's [waves lecture notes](http://www.people.fas.harvard.edu/~hgeorgi/onenew.pdf). This line of thought led to ideas like [dimensional deconstruction](https://en.wikipedia.org/wiki/Dimensional_deconstruction). 
+
+* [Meeting 05](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec05.pdf): Row vectors as linear transformations on vectors. Bases. Bra-ket notation.
+
+* [Meeting 06](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec06.pdf): Green's functions in linear algebra... taking the inverse.
