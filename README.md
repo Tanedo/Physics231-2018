@@ -38,7 +38,7 @@ I strongly recommended that you have access to at least one general "math method
 
 * [*Mathematics of Classical and Quantum Physics*](http://store.doverpublications.com/048667164x.html),  Byron and Fuller
 
-* [* Mathematical Methods of Physics*](https://www.pearson.com/us/higher-education/program/Mathews-Mathematical-Methods-of-Physics-2nd-Edition/PGM138979.html), Mathews and Walker
+* [*Mathematical Methods of Physics*](https://www.pearson.com/us/higher-education/program/Mathews-Mathematical-Methods-of-Physics-2nd-Edition/PGM138979.html), Mathews and Walker
 
 * [*Statistics: A Guide to the Use of Statistical Methods in the Physical Sciences*](http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471922951.html), Barlow; if we do statistics.
 
@@ -52,8 +52,8 @@ It may be useful to refer to [last year's course notes](https://github.com/Taned
 	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1b.pdf) due Mon, Oct 15: linear algebra  
 
 <!--2. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2a.pdf) due Wed, Oct 17: Green's Function Primer
-	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2b.pdf) due Mon, Oct 29: What's a Green's Function-->
-
+	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2b.pdf) due Mon, Oct 29: What's a Green's Function--
+-->
 	
 <!--2. [Short Homework]()  
 	[Long homework ]()  
@@ -70,11 +70,11 @@ Christopher Cain: Interpreting HW1b, Problem 3.
 John Lee: Explain HW1b eq (2.1), discuss boundary conditions.  
 
 * **Wed, Oct 17**:
-Michael Worcester,
-Shirash Regmi,
-Medhanie Estiphanos,
-Mehmet Kilinc,
-Cameron Racz
+Michael Worcester: What is the [NSF GRFP](https://www.nsfgrfp.org)?  
+Shirash Regmi: What to expect from TA'ing a lab  
+Medhanie Estiphanos: How to [access UCR library resources off campus](https://library.ucr.edu/using-the-library/technology-equipment/connect-from-off-campus)  
+Mehmet Kilinc: What kind of [outreach](https://cnas.ucr.edu/outreach/) can a grad student do?  
+Cameron Racz: What resources does [GradSuccess](http://graduate.ucr.edu/success.html) have for phys/astro students?    
 
 * **Wed, Oct 24**:
 Ao Shi,
