@@ -136,3 +136,7 @@ These notes are provided *as is* and may have errors. They also do *not* include
 * [Meeting 05](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec05.pdf): Row vectors as linear transformations on vectors. Bases. Bra-ket notation.
 
 * [Meeting 06](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec06.pdf): Green's functions in linear algebra... taking the inverse.
+
+* [Meeting 07](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec07.pdf): Green's functions in linear algebra: a trivial example. Sample pop talk: focusing on your audience. Life pro tips for surviving graduate school. 
+
+* [Meeting 08](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec08.pdf): Q & A and Pop Talks. **Index Card**: observations of good traits and pitfalls in today's pop talks. 
