@@ -51,10 +51,10 @@ It may be useful to refer to [last year's course notes](https://github.com/Taned
 1. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1a.pdf) due Wed, Oct 3: dimensional analysis  
 	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1b.pdf) due Mon, Oct 15: linear algebra  
 
-<!--2. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2a.pdf) due Wed, Oct 17: Green's Function Primer
+<!--<!--2. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2a.pdf) due Wed, Oct 17: Green's Function Primer
 	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2b.pdf) due Mon, Oct 29: What's a Green's Function--
 -->
-	
+-->	
 <!--2. [Short Homework]()  
 	[Long homework ]()  
 -->
