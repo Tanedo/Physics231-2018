@@ -125,7 +125,7 @@
 \begin{center}
 
     {\Large \textsc{Homework 2a:} 
-    \textbf{Green's Function Primer}}
+    \textbf{Self-Adjointness}}
     
 \end{center}
 
@@ -144,28 +144,64 @@
 	&
 	& 
 	\\
-	\textsc{Due by:}& Wed, October 10
+	\textsc{Due by:}& Wed, October 17
 	&
 	%\hfill
 	&
 	%	
 \end{tabular*}
 
-\subsection{A proto-Green's Function} 
+\subsection{The $i$ in the momentum operator} 
 
-Suppose that you need to find the vector $\vec x$, an element of $\mathbbm{R}^3$, given a relation
+In one-dimensional quantum mechanics the momentum operator is defined to be
 \begin{align}
-	A \vec{x} = \vec{y}_0 \ ,
+	\hat p = -i \frac{d}{dx} \ ,
 \end{align}
-where $\vec{y}_0$ is known, but $A$ is not known. Instead, you are given the following information about the action of the inverse transform on a particular basis:
+where we set $\hbar = 1$.
+Suppose the vector space of wavefunctions is composed of complex functions $\psi(x)$ over the real line that are square integrable\footnote{This basically means that $\psi(x)\to 0$ sufficiently fast for $x\to \pm \infty$. This means that you can integrate by parts without worrying about boundary terms.}. The inner product on this space is
 \begin{align}
-	A^{-1}\ket{1} &= c\ket{1} - s\ket{2}
-	&
-	A^{-1}\ket{2} &= s\ket{2} + c\ket{1}
-	&
-	A^{-1}\ket{3} &= \ket{3} \ .
+	\langle \psi, \chi \rangle = \int_{-\infty}^\infty dx\; \psi^*(x)\, \chi(x) \ .
 \end{align}
-If $\vec y_0 = \sum y^i\ket{i}$ and you know the components $(y^1, y^2, y^3)$ in this basis, what are the components of $\vec x$, $(x^1, x^2, x^3)$, in this basis?
+Recall that an operator $\mathcal O$ is self-adjoint (Hermitian) if $\mathcal O^\dag = \mathcal O$. This is defined by:
+\begin{align}
+	\langle \mathcal O\psi, \chi \rangle
+	= 
+	\langle \psi,  \mathcal O \chi \rangle \ .
+\end{align} 
+Show that $\hat p$ is self-adjoint. Comment on why it is important that $\hat p$ is defined to have a factor of $i$ in it. Comment on whether or not the overall sign is meaningful.
+
+
+\section{Extra Credit}
+
+These problems are not graded and are for your edification. You are strongly encouraged to explore and discuss these topics, especially if they are in a field of interest to you.
+
+
+\subsection{A two-dimensional function space} 
+
+%https://math.stackexchange.com/questions/942263/really-advanced-techniques-of-integration-definite-or-indefinite/943212
+
+Let us ignore the subtleties of defining a function space (metric, domain, boundary conditions). Instead, let's construct a cute two-dimensional function space that gives us a shortcut to calculate a particular \emph{indefinite} integral. 
+
+Consider a two dimensional vector space spanned by the functions
+\begin{align}
+	\left|f_1\right\rangle
+	&= f_1(x) = 
+	e^{ax} \cos bx
+	&
+	\left|f_2\right\rangle
+	&=
+	f_2(x) = 
+	e^{ax} \sin bx \ ,
+\end{align}
+where $a$ and $b$ are constants. Forget orthonormality or boundary conditions for this problem. The derivative $d/dx$ is a linear operator that acts on this space. Write down the derivative as a $2\times 2$ matrix in the above basis, $D$.
+
+Invert $D$ in the usual way that you learned to invert $2\times 2$ matrices during your childhood\footnote{Stuck? Here's a life pro tip: \url{http://bfy.tw/KG2Z}}. Call this matrix $D^{-1}$. 
+
+Now stop and think: the inverse of a derivative is an indefinite integral\footnote{Ignore the constant term.}. Thus acting with $D^{-1}$ on the vector $|f_1\rangle$ should be understood as an integral of $f_1(x)$. Show that, indeed,
+\begin{align}
+	D^{-1} |f_1\rangle = \int dx\, e^{ax} \cos bx \ .
+\end{align}
+Feel free to use \emph{Mathematica} to do the indefinite integral on the right-hand side. Pat yourself on the back if you can do it without a computer.
 
 
 

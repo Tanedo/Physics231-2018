@@ -198,7 +198,7 @@ Write down the Green's function $G(x,y)$ using the completeness trick with respe
 \textsc{Hint:} Once you did the previous part, this step takes about twenty seconds depending on how quickly you write.
 
 
-\subsubsection{Hands on}
+\subsubsection{Extra Credit: Hands on (recommended)}
 
 You have a free license for several types of scientific software 
 through \acro{UCR} through MySoftware\footnote{\url{http://cnc.ucr.edu/mysoftware/}}. This problem requires some plotting. I suggest using \emph{Mathematica}\footnote{It sucks that this is not open source software. The closest open source alternative is \texttt{SciPy} with a \texttt{Jupyer} notebook.}. 
@@ -219,6 +219,15 @@ Does this shape make sense? What do you expect will happen as $n$ becomes larger
 
 \emph{This looks like a long problem, but it's mostly reading and understanding. Each step is modest.}
 
+%\textcolor{blue}{\textbf{Correction} (10/27): The $(d/dx)^2$ operator is not self-adjoint. As we saw in class, the formally self adjoint operator is $-(d/dx)^2$. As a result, the eigenvalues of $(d/dx)^2$ are negative rather than positive. this problem has been updated to have the corrected operator. Homework 4 had the same error, though it only shows up in the plot for large $k^2$. Thanks to Wei-Xiang Feng for catching this.}
+
+% This is kind of tricky, see page 270 of MW (9-4: inhomogeneous problems)
+%
+%Thus far in this course, we have examined two ways of solving for Green's functions:
+%\begin{enumerate}
+%	\item \textbf{Fourier transform}. We talked about this briefly for the electrostatic problem. With this method, it is easy to solve for $\tilde G(k)$, the momentum space Green's function, but we will rely on the residue theorem to perform the integral to go back to position space.
+%	\item \textbf{Completeness and projection}. In Homework 4, Problem \#2 we solved a simple Green's function by using the completeness of a set of eigenfunctions. This method generalizes to the `named functions' of physics\footnote{For example: Bessel functions, Legendre polynomials, Spherical harmonics. To the best of my knowledge, `Spherical' was not a mathematician.} that are special because they are eigenfunctions for common classes of differential operators.
+%\end{enumerate}
 In this problem we solve for a Green's function by patching together solutions of the homogeneous equation.  We examine the same system that you did in Homework 4, Problem \#2: consider a second order differential equation acting on a state $\psi(x)$ with a source $s(x)$. 
 \begin{align*}
 \mathcal O \psi(x) = 
@@ -227,6 +236,7 @@ In this problem we solve for a Green's function by patching together solutions o
 We consider the domain $x\in[0,1]$ with boundary conditions $\psi(0) = \psi(1) = 0$. \textbf{For simplicity}, we'll take $k^2 = 0$ and leave the $k^2 \neq 0$ case for extra credit.
 
 
+%Matthews and Walker, p 258
 
 We want to solve the Green's function equation, $$\mathcal O G(x,y) = \delta(x-y)\, .$$ In this method, we solve the \emph{homogeneous} equation $\mathcal O G(x,y) = 0$ for $x\neq y$ in the two regions $x<y$ and $x>y$. These two solutions will each have independent coefficients that we must patch together at $x=y$.
 
@@ -290,15 +300,6 @@ Take all of the above results and write down the piece-wise definition of $G(x,y
 \emph{This problem is not graded and is purely for your ``enjoyment.''} Perform the same steps for the case of $k^2\neq 0$. The homogeneous solution is now a sine, which makes things a bit more complicated. The procedure is completely the same and the $k^2 \lesssim 1$ case is well approximated by $k^2=0$, as you will have noticed from the plot in the previous problem. \textsc{Solution}: Matthews \& Walker, Chapter 9--4. 
 
 
-\subsection{That funny $i$ in the derivative}
-
-In quantum mechanics, observables are Hermitian (self adjoint) operators. This is important because the value of the observable is a real number and the eigenvalues of Hermitian operators are real. Given that the inner product on our wavefunction space is
-\begin{align}
-	\langle f | g \rangle = \int dx \; f^*(x) g(x) \ ,
-\end{align}
-	explain the factor of $i$ in the \textbf{momentum operator}, $\hat p = i\hbar(d/dx)$. Why is this factor of $i$ critical for $\hat p$ to be self adjoint? Show that the eigenvalue of a (momentum eigenstate) plane wave is real. 
-
-
 
 
 
@@ -306,6 +307,7 @@ In quantum mechanics, observables are Hermitian (self adjoint) operators. This i
 
 
 \subsection{Practice with complex integration}
+% Boas 14.3.1
 
 \subsubsection{This is not a closed loop}
 
@@ -319,41 +321,56 @@ with respect to the path that connects $z=i$ and $z=i+1$ by a straight line segm
 
 Calculate the following integrals using the residue theorem:
 \begin{enumerate}[(a)]
-	\item $\displaystyle \int_{0}^\infty \frac{x^2}{x^4 + 16} dx$ 
-	\item $\displaystyle \int_{-\infty}^\infty \frac{\sin x}{x^2 + 4x + 5}dx$ 
-	\item $\displaystyle \int_{0}^\infty \frac{1}{x^6+1}dx$ using a contour including the real line and a large semicircle in the complex plane 
+	\item $\displaystyle \int_{0}^\infty \frac{x^2}{x^4 + 16} dx$ % Boas ch 7 probs
+	\item $\displaystyle \int_{-\infty}^\infty \frac{\sin x}{x^2 + 4x + 5}dx$ % Boas ch 7 probs
+	\item $\displaystyle \int_{0}^\infty \frac{1}{x^6+1}dx$ using a contour including the real line and a large semicircle in the complex plane % Appel ch 4 probs
 	\item $\displaystyle \int_{0}^\infty \frac{1}{x^6+1}dx$ using a contour that encloses the `pizza slice' wedge between $\theta = 0$ and $\theta = \pi/3$. 
 \end{enumerate}
 
-\textsc{Hint}: for (d), the line integral along the diagonal is proportional to the integral you want. 
+\textsc{Hint}: for (d), the line integral along the diagonal is proportional to the integral you want. % Appel ch 4 probs
 
 
+\subsection{Preparing for a personal statement}
+
+The National Science Foundation Graduate Research Fellowship is a prestigious graduate fellowship that supports students for three years with a stipend. This frees you from teaching obligations, provides research flexibility, and is an excellent item on a CV. While not everyone is eligible for the fellowship, the components are fairly typical of the many kinds of funding opportunities you will see in your research career (including grants, telescope time requests, etc.). Find information about the GRFP here: \url{https://www.nsfgrfp.org}
+
+\begin{enumerate}[(a)]
+	\item What are the eligibility requirements for an NSF graduate research fellowship with respect to citizenship?
+	\item What are the main components of the application? How many pieces of writing, what are the goals of each essay? 
+	\item How many letters of recommendation are required? If you were to apply this year, who would those letters be from?
+	\item What are the main criteria for evaluating the application?
+	\item What resources are available at UCR to help you with writing?
+	\item When is the application due, when is the last time one is eligible to apply?
+	\item Write a list of five ideas that you would include in your research statement if you were to apply for this fellowship.
+	\item Write a list of five ideas that you would include in your personal statement if you were to apply for this fellowship.
+\end{enumerate}
 
 
-\subsection{How to find Residues}
-
-This problem is based on Boas (page 599) and Appel (section 4.5d).
 %
-We saw that a \textbf{meromorphic} (analytic up to poles) function has a Laurent series expansion about a point $z_0$,
-\begin{align}
-f(z) &= \sum_{n=-\infty}^{\infty} a_n (z-z_0)^n
-	\ .
-\end{align}
-The $a_{-1}$ term has special significance and is known as the \textbf{residue} of $f$ at $z_0$, $\text{Res}(f,z_0)$. When we have an explicit Laurent expansion about $z_0$, identifying the residue is a matter of reading off the $(z-z_0)^{-1}$ coefficient. Alternately, when $z_0$ is a simple pole the function can be written as
-\begin{align}
-	f(z) = \frac{F(z)}{(z-z_0)} \ ,
-\end{align}
-where $F(z)$ is analytic at $z_0$. In this case, the residue is $\text{Res}(f,z_0) = F(z_0)$. This leads to the sometimes useful guide: If $f(z_0)$ is not finite but $(z-z_0)\, f(z)$ is finite, then
-	\begin{align}
-		\text{Res}(f,z_0) &=  \lim_{z\to z_0} (z-z_0)\, f(z) \ .
-	\end{align}
-What do we do if $(z-z_0)\, f(z)$ is \emph{not} finite? For example, what if both $a_{-1}$ and $a_{-2}$ were non-zero? How does determine the residue ($a_1$) in such a case? Explain why the following algorithm works: Find the positive integer $m$ such that $F_m(z)=(z-z_0)^m f(z)$ is finite at $z=z_0$, then the residue is
-\begin{align}
-	\text{Res}(f,z_0) = \left.\frac{1}{(m-1)!} \frac{d^{m-1}}{dz^{m-1}} F_m(z)\right|_{z=z_0} \ .
-\end{align}
-
-
-
+%\subsection{How to find Residues}
+%
+%This problem is based on Boas (page 599) and Appel (section 4.5d).
+%%
+%We saw that a \textbf{meromorphic} (analytic up to poles) function has a Laurent series expansion about a point $z_0$,
+%\begin{align}
+%f(z) &= \sum_{n=-\infty}^{\infty} a_n (z-z_0)^n
+%	\ .
+%\end{align}
+%The $a_{-1}$ term has special significance and is known as the \textbf{residue} of $f$ at $z_0$, $\text{Res}(f,z_0)$. When we have an explicit Laurent expansion about $z_0$, identifying the residue is a matter of reading off the $(z-z_0)^{-1}$ coefficient. Alternately, when $z_0$ is a simple pole the function can be written as
+%\begin{align}
+%	f(z) = \frac{F(z)}{(z-z_0)} \ ,
+%\end{align}
+%where $F(z)$ is analytic at $z_0$. In this case, the residue is $\text{Res}(f,z_0) = F(z_0)$. This leads to the sometimes useful guide: If $f(z_0)$ is not finite but $(z-z_0)\, f(z)$ is finite, then
+%	\begin{align}
+%		\text{Res}(f,z_0) &=  \lim_{z\to z_0} (z-z_0)\, f(z) \ .
+%	\end{align}
+%What do we do if $(z-z_0)\, f(z)$ is \emph{not} finite? For example, what if both $a_{-1}$ and $a_{-2}$ were non-zero? How does determine the residue ($a_1$) in such a case? Explain why the following algorithm works: Find the positive integer $m$ such that $F_m(z)=(z-z_0)^m f(z)$ is finite at $z=z_0$, then the residue is
+%\begin{align}
+%	\text{Res}(f,z_0) = \left.\frac{1}{(m-1)!} \frac{d^{m-1}}{dz^{m-1}} F_m(z)\right|_{z=z_0} \ .
+%\end{align}
+%
+%
+%
 
 
 
@@ -367,32 +384,6 @@ What do we do if $(z-z_0)\, f(z)$ is \emph{not} finite? For example, what if bot
 These problems are not graded and are for your edification. You are strongly encouraged to explore and discuss these topics, especially if they are in a field of interest to you.
 
 
-
-\subsection{A two-dimensional function space} 
-
-
-Let us ignore the subtleties of defining a function space (metric, domain, boundary conditions). Instead, let's construct a cute two-dimensional function space that gives us a shortcut to calculate a particular \emph{indefinite} integral. 
-
-Consider a two dimensional vector space spanned by the functions
-\begin{align}
-	\left|f_1\right\rangle
-	&= f_1(x) = 
-	e^{ax} \cos bx
-	&
-	\left|f_2\right\rangle
-	&=
-	f_2(x) = 
-	e^{ax} \sin bx \ ,
-\end{align}
-where $a$ and $b$ are constants. Forget orthonormality or boundary conditions for this problem. The derivative $d/dx$ is a linear operator that acts on this space. Write down the derivative as a $2\times 2$ matrix in the above basis, $D$.
-
-Invert $D$ in the usual way that you learned to invert $2\times 2$ matrices during your childhood\footnote{Stuck? Here's a life pro tip: \url{http://bfy.tw/KG2Z}}. Call this matrix $D^{-1}$. 
-
-Now stop and think: the inverse of a derivative is an indefinite integral\footnote{Ignore the constant term.}. Thus acting with $D^{-1}$ on the vector $|f_1\rangle$ should be understood as an integral of $f_1(x)$. Show that, indeed,
-\begin{align}
-	D^{-1} |f_1\rangle = \int dx\, e^{ax} \cos bx \ .
-\end{align}
-Feel free to use \emph{Mathematica} to do the indefinite integral on the right-hand side. Pat yourself on the back if you can do it without a computer.
 
 
 
