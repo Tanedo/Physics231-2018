@@ -136,3 +136,7 @@ These notes are provided *as is* and may have errors. They also do *not* include
 * [Meeting 07](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec07.pdf): Green's functions in linear algebra: a trivial example. Sample pop talk: focusing on your audience. Life pro tips for surviving graduate school. 
 
 * [Meeting 08](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec08.pdf): Q & A and Pop Talks. **Index Card**: observations of good traits and pitfalls in today's pop talks. 
+
+* [Meeting 09](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec08.pdf): Inner products on function space. Self-adjoitness, Hermiticity, all that.
+
+* [Meeting 10-11](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec10.pdf) [(Additional)](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec11.pdf): Constructing Green's functions of self-adjoint differential operators using (1) completeness, (2) patching.  
