@@ -56,7 +56,7 @@ It may be useful to refer to [last year's course notes](https://github.com/Taned
 
 ## Talk Schedule
 
-Topics to be assigned and discussed in our meetings. The order was determined using `random.org` and then the undergrads were rearranged to talk first.
+Topics to be assigned and discussed in our meetings. The order was determined using `random.org` and then the undergrads were rearranged to talk first. Suggested topics are listed.  
 
 * **Wed, Oct 10**:  
 Kyle Perez: HW1b, extra credit 2(f).  
@@ -72,44 +72,48 @@ Medhanie Estiphanos: How to [access UCR library resources off campus](https://li
 Mehmet Kilinc: What kind of [outreach](https://cnas.ucr.edu/outreach/) can a grad student do?  
 Cameron Racz: What resources does [GradSuccess](http://graduate.ucr.edu/success.html) have for phys/astro students?    
 
-* **Wed, Oct 24**:
-Ao Shi,
-Ian Cadenhead,
-Linke Xie,
-Elizabeth Finney,
+* **Wed, Oct 24**:  
+Ao Shi: Homework 2B, Problem 1.1 - 1.2  
+Ian Cadenhead: Homework 2B, Problem 12   
+Linke Xie: Homework 2B: Problem Problem 3.1  
+Elizabeth Finney:  Homework 2B: Problem 4, parts a -- e  
 Ming-Feng Ho: Homework 2B, Problem 1.3
 
-* **Wed, Oct 31**:
-Mehrdad Phoroutan Mehr,
-Alexander Mercaldi,
-Brian Lee,
-Mahdi Qezlou,
-Mingda Guo
+* **Wed, Oct 31**:  
+The talks for this session are now on Dec 7 due to concerns that the 5 minute talk preparation is an undue burden during midterm exams.  
 
-* **Wed, Nov 7**:
-Meng Hou,
-Yongda Zhu,
-Jackson Kishbaugh-Maish,
-Robert Dawson,
-Adam Green
+* **Wed, Nov 7**:  
+Meng Hou,  
+Yongda Zhu,  
+Jackson Kishbaugh-Maish,  
+Robert Dawson,  
+Adam Green  
 
-* **Wed, Nov 14**:
-Xilin Liang,
-Michael Gordon,
-Chen Wang,
-William Baker
+* **Wed, Nov 14**:   
+Xilin Liang,  
+Michael Gordon,  
+Chen Wang,  
+William Baker  
 
-* **Wed, Nov 21**:
-Nakul Gangolli,
-Shixiong Wang,
-Cameron Chevalier,
-Jonathan Turner
+* **Wed, Nov 21**:  
+Nakul Gangolli,  
+Shixiong Wang,  
+Cameron Chevalier,  
+Jonathan Turner  
 
-* **Wed, Nov 28**:
-Varrick Suezaki,
-Yifan Liu,
-Erik Loyd,
-Zahra Sattari
+* **Wed, Nov 28**:  
+Varrick Suezaki,  
+Yifan Liu,  
+Erik Loyd,  
+Zahra Sattari  
+
+* **Wed, Dec 5**:  
+Mehrdad Phoroutan Mehr,  
+Alexander Mercaldi,  
+Brian Lee,  
+Mahdi Qezlou,  
+Mingda Guo  
+
 
 ## Evaluation
 
@@ -143,4 +147,4 @@ These notes are provided *as is* and may have errors. They also do *not* include
 
 * Meeting 12: Q & A and Pop Talks
 
-* 
+* [Meeting 13](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec13%20(Lec%2011%202017).pdf): Introduction to complex analysis. Analyticity, Cauchy-Riemann equations.  
