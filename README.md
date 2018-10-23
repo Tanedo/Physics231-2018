@@ -143,7 +143,7 @@ These notes are provided *as is* and may have errors. They also do *not* include
 
 * [Meeting 09](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec09.pdf): Inner products on function space. Self-adjoitness, Hermiticity, all that.
 
-* [Meeting 10-11](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec10.pdf) [(Additional)](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec11.pdf): Constructing Green's functions of self-adjoint differential operators using (1) completeness, (2) patching.  
+* [Meeting 10-11](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec10.pdf) [(Additional)](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec11.pdf): Constructing Green's functions of self-adjoint differential operators using (1) completeness, (2) patching.   
 
 * Meeting 12: Q & A and Pop Talks
 
