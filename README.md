@@ -76,7 +76,7 @@ Cameron Racz: What resources does [GradSuccess](http://graduate.ucr.edu/success.
 Ao Shi: Homework 2B, Problem 1.1 - 1.2  
 Ian Cadenhead: Homework 2B, Problem 12   
 Linke Xie: Homework 2B: Problem Problem 3.1  
-Elizabeth Finney:  Homework 2B: Problem 4, parts a -- e  
+Elizabeth Finney:  Homework 2B: Problem 4, parts (a-e)  
 Ming-Feng Ho: Homework 2B, Problem 1.3
 
 * **Wed, Oct 31**:  
