@@ -147,4 +147,4 @@ These notes are provided *as is* and may have errors. They also do *not* include
 
 * Meeting 12: Q & A and Pop Talks
 
-* [Meeting 13](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec13%20(Lec%2011%202017).pdf): Introduction to complex analysis. Analyticity, Cauchy-Riemann equations.  
+* [Meeting 13](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec13.pdf): Introduction to complex analysis. Analyticity, Cauchy-Riemann equations.  
