@@ -68,7 +68,7 @@ John Lee: Explain HW1b eq (2.1), discuss boundary conditions.
 * **Wed, Oct 17**:
 Michael Worcester: What is the [NSF GRFP](https://www.nsfgrfp.org)?  
 Shirash Regmi: What to expect from TA'ing a lab  
-Medhanie Estiphanos: How to [access UCR library resources off campus](https://library.ucr.edu/using-the-library/technology-equipment/connect-from-off-campus)  
+Medhanie Estiphanos: Research talk
 Mehmet Kilinc: What kind of [outreach](https://cnas.ucr.edu/outreach/) can a grad student do?  
 Cameron Racz: What resources does [GradSuccess](http://graduate.ucr.edu/success.html) have for phys/astro students?    
 
