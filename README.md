@@ -51,7 +51,7 @@ It may be useful to refer to [last year's course notes](https://github.com/Taned
 1. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1a.pdf) due Wed, Oct 3: dimensional analysis  
 	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1b.pdf) due Mon, Oct 15: linear algebra  
 
-2. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2a.pdf) due Wed, Oct 17: Green's Function Primer
+2. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2a.pdf) due Wed, Oct 17: Green's Function Primer  
 	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2b.pdf) due Mon, Oct 29: What's a Green's Function--
 
 ## Talk Schedule
@@ -77,7 +77,7 @@ Ao Shi,
 Ian Cadenhead,
 Linke Xie,
 Elizabeth Finney,
-Ming-Feng Ho
+Ming-Feng Ho: Homework 2B, Problem 1.3
 
 * **Wed, Oct 31**:
 Mehrdad Phoroutan Mehr,
@@ -137,6 +137,10 @@ These notes are provided *as is* and may have errors. They also do *not* include
 
 * [Meeting 08](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec08.pdf): Q & A and Pop Talks. **Index Card**: observations of good traits and pitfalls in today's pop talks. 
 
-* [Meeting 09](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec08.pdf): Inner products on function space. Self-adjoitness, Hermiticity, all that.
+* [Meeting 09](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec09.pdf): Inner products on function space. Self-adjoitness, Hermiticity, all that.
 
 * [Meeting 10-11](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec10.pdf) [(Additional)](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec11.pdf): Constructing Green's functions of self-adjoint differential operators using (1) completeness, (2) patching.  
+
+* Meeting 12: Q & A and Pop Talks
+
+* 
