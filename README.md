@@ -52,7 +52,11 @@ It may be useful to refer to [last year's course notes](https://github.com/Taned
 	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW1b.pdf) due Mon, Oct 15: linear algebra  
 
 2. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2a.pdf) due Wed, Oct 17: Green's Function Primer  
-	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2b.pdf) due Mon, Oct 29: What's a Green's Function--
+	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW2b.pdf) due Mon, Oct 29: What's a Green's Function  
+
+2. [Short Homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW3a.pdf) due Wed, Oct 31: Analytic Functions are Too Nice  
+	[Long homework](https://github.com/Tanedo/Physics231-2018/blob/master/homework/P231_2018_HW3b.pdf) due Mon, Nov 12: Complex Analysis  
+
 
 ## Talk Schedule
 
@@ -73,10 +77,10 @@ Mehmet Kilinc: What kind of [outreach](https://cnas.ucr.edu/outreach/) can a gra
 Cameron Racz: What resources does [GradSuccess](http://graduate.ucr.edu/success.html) have for phys/astro students?    
 
 * **Wed, Oct 24**:  
-Ao Shi: Homework 2B, Problem 1.1 - 1.2  
-Ian Cadenhead: Homework 2B, Problem 12   
-Linke Xie: Homework 2B: Problem Problem 3.1  
-Elizabeth Finney:  Homework 2B: Problem 4, parts (a-e)  
+Ao Shi: *unavailable*  
+Ian Cadenhead: Research talk   
+Linke Xie: Homework 2B: Research talk  
+Elizabeth Finney:  Impostor's Syndrome  
 Ming-Feng Ho: Homework 2B, Problem 1.3
 
 * **Wed, Oct 31**:  
@@ -148,3 +152,7 @@ These notes are provided *as is* and may have errors. They also do *not* include
 * Meeting 12: Q & A and Pop Talks
 
 * [Meeting 13](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec13.pdf): Introduction to complex analysis. Analyticity, Cauchy-Riemann equations.  
+
+* Meeting 14: Q & A and Pop Talks
+
+* Meeting 15: Cauchy integral theorem.
