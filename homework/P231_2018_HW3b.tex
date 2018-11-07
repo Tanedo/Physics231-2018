@@ -247,17 +247,17 @@ Our conventions correspond to $B=1$ and $A=1$. Show that in this general form, t
 
 In two Euclidean dimensions, the Fourier transform is
 \begin{align}
-	f(x, y) = \int\frac{dx}{2\pi} \int\frac{dy}{2\pi} \, e^{-ik_xx} e^{-ik_yy} \tilde f(k_x, k_y) \ .
+	f(x, y) = \int\frac{dk_x}{2\pi} \int\frac{dk_y}{2\pi} \, e^{-ik_xx} e^{-ik_yy} \tilde f(k_x, k_y) \ .
 \end{align}
 This can be rewritten in terms of a position 2-vector\footnote{Mathematicians laugh at us when we say `position vector.'} $\vec{x}$ and corresponding momentum 2-vector $\vec{k}$ \ , 
 \begin{align}
-	f(\vec x) = \int\frac{d^2\vec x}{(2\pi)^2}  \, e^{-i\vec k\cdot \vec y} \tilde f(\vec k) \ .
+	f(\vec x) = \int\frac{d^2\vec k}{(2\pi)^2}  \, e^{-i\vec k\cdot \vec y} \tilde f(\vec k) \ .
 \end{align}
 Observe that the exponential is built out of the rotationally-invariant scalar quantity, $\vec k\cdot \vec y$. 
 %
 When we deal with \emph{partial} differential equations, we'll need to Fourier transform in multiple dimensions. Sometimes we'll have to Fourier transform in both time and space. It is conventional to choose signs so that we may write this as 
 \begin{align}
-	f(x, t) = \int\frac{dx}{2\pi} \int\frac{dt}{2\pi} \, e^{+ikx} e^{-i\omega t} \tilde f(k, \omega) \ .
+	f(x, t) = \int\frac{dk}{2\pi} \int\frac{d\omega}{2\pi} \, e^{+ikx} e^{-i\omega t} \tilde f(k, \omega) \ .
 \end{align}
 Briefly comment why this is a good idea from two points of view:
 \begin{enumerate}
@@ -303,7 +303,7 @@ We shall prove the Laurent Theorem for the expansion about $z_0$ of a function $
 \begin{align}
 f(z) &= \sum_{n=-\infty}^{\infty} a_n (z-z_0)^n
 &
-a_n &= \frac{1}{2\pi i} \oint_C \frac{f(z)}{(z-z_0)} dz \ ,
+a_n &= \frac{1}{2\pi i} \oint_C \frac{f(z)}{(z-z_0)^{n+1}} dz \ ,
 \end{align}
 where $C$ is a contour that loops once counter-clockwise around $z_0$.
 
