@@ -1,0 +1,263 @@
+\documentclass[12pt]{article}
+%% arXiv paper template by Flip Tanedo
+%% last updated: Dec 2016
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  THE USUAL PACKAGES  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{nopageno}
+\usepackage{enumerate}
+\usepackage{parskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  UNUSUAL PACKAGES        %%%%
+%%%  Uncomment as necessary. %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% MATH AND PHYSICS SYMBOLS
+%% ------------------------
+%\usepackage{slashed}       % \slashed{k}
+%\usepackage{mathrsfs}      % Weinberg-esque letters
+%\usepackage{youngtab}	    % Young Tableaux
+%\usepackage{pifont}        % check marks
+\usepackage{bbm}           % \mathbbm{1} incomp. w/ XeLaTeX 
+%\usepackage[normalem]{ulem} % for \sout
+
+
+%% CONTENT FORMAT AND DESIGN (below for general formatting)
+%% --------------------------------------------------------
+\usepackage{lipsum}        % block of text (formatting test)
+%\usepackage{color}         % \color{...}, colored text
+%\usepackage{framed}        % boxed remarks
+%\usepackage{subcaption}    % subfigures; subfig depreciated
+%\usepackage{paralist}      % compactitem
+%\usepackage{appendix}      % subappendices
+%\usepackage{cite}          % group cites (conflict: collref)
+%\usepackage{tocloft}       % Table of Contents	
+
+%% TABLES IN LaTeX
+%% ---------------
+%\usepackage{booktabs}      % professional tables
+%\usepackage{nicefrac}      % fractions in tables,
+%\usepackage{multirow}      % multirow elements in a table
+%\usepackage{arydshln} 	    % dashed lines in arrays
+
+%% Other Packages and Notes
+%% ------------------------
+%\usepackage[font=small]{caption} % caption font is small
+
+
+
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  PAGE FORMATTING and (RE)NEW COMMANDS  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[margin=2cm]{geometry}   % reasonable margins
+
+\graphicspath{{figures/}}	        % set directory for figures
+
+% for capitalized things
+\newcommand{\acro}[1]{\textsc{\MakeLowercase{#1}}}    
+
+\numberwithin{equation}{subsection}    % set equation numbering
+\renewcommand{\tilde}{\widetilde}   % tilde over characters
+\renewcommand{\vec}[1]{\mathbf{#1}} % vectors are boldface
+
+\newcommand{\dbar}{d\mkern-6mu\mathchar'26}    % for d/2pi
+\newcommand{\ket}[1]{\left|#1\right\rangle}    % <#1|
+\newcommand{\bra}[1]{\left\langle#1\right|}    % |#1>
+\newcommand{\Xmark}{\text{\sffamily X}}        % cross out
+
+
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+  \olditemize
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+
+% Commands for temporary comments
+\newcommand{\comment}[2]{\textcolor{red}{[\textbf{#1} #2]}}
+\newcommand{\flip}[1]{{\color{red} [\textbf{Flip}: {#1}]}}
+\newcommand{\email}[1]{\texttt{\href{mailto:#1}{#1}}}
+
+\newenvironment{institutions}[1][2em]{\begin{list}{}{\setlength\leftmargin{#1}\setlength\rightmargin{#1}}\item[]}{\end{list}}
+
+
+\usepackage{fancyhdr}		% to put preprint number
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%%%  HYPERREF  %%%%
+%%%%%%%%%%%%%%%%%%%
+
+%% This package has to be at the end; can lead to conflicts
+\usepackage{microtype}
+\usepackage[
+	colorlinks=true,
+	citecolor=black,
+	linkcolor=black,
+	urlcolor=green!50!black,
+	hypertexnames=false]{hyperref}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%  TITLE DATA  %%%%
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+
+    {\Large \textsc{Homework 4:} 
+    \textbf{Damped Harmonic Oscillator}}
+    
+\end{center}
+
+\vskip .4cm
+
+\noindent
+\begin{tabular*}{\textwidth}{rlcrll}
+	\textsc{Course:}& Physics 231, \emph{Methods of Theoretical Physics} (2018)
+	&
+%	\hspace{1.2cm}
+	&
+	\\
+	\textsc{Instructor:}& Professor Flip Tanedo (\email{flip.tanedo@ucr.edu})
+	&
+	%\hfill
+	&
+	& 
+	\\
+	\textsc{Due by:}& Mon, November 26 (or before the last lecture of the term)
+	&
+	%\hfill
+	&
+	%	
+\end{tabular*}
+
+
+
+\subsection{The 1D Damped Harmonic Oscillator: application}
+% 
+
+This problem is based on Byron and Fuller, \emph{Mathematics of Classical and Quantum Physics}, section 7.3. You can also find the procedure outlined\footnote{With possible egregious sign errors!} in the 2017 lecture notes from this class.
+
+\subsubsection{Find the Green's Function}
+
+The damped harmonic oscillator with driving force (per unit mass) $F(t)$. 
+\begin{align}
+	\ddot x(t) + 2 \gamma \dot x(t) + \omega_0^2 x(t) = F(t) \ .
+	\label{eq:ODE}
+\end{align}
+
+\vspace{.5em}
+Following the same procedure that we did for the un-damped harmonic oscillator, show that the Green's function is:
+\begin{align}
+	G(t-t') &= \frac{
+	e^{-\gamma(t-t')} 
+	\sin\left[\sqrt{\omega_0^2-\gamma^2}\, (t-t')\right]
+	}{\sqrt{\omega_0^2-\gamma^2}} \ .
+\end{align}
+
+\textsc{Hint}: Do a Fourier transform to determine $\tilde G(k)$, then perform the integral to obtain $G(t)$. In the \emph{undamped} case, we had to pick a $\pm i\epsilon$ prescription to push the poles off the real axis. The choice of prescription determined whether we were calculating the advanced, retarded, or Feynman Green's function. In this case, there is no such prescription to choose---do you see why? 
+
+
+\subsubsection{A full problem}
+
+Let's go back to the complete problem. We would like to find the solution to the forced, damped spring with some force function $F(t)$, that is, (\ref{eq:ODE}). The solutions of this system are $x(t)$, given by 
+\begin{align}
+	x(t) = A x_1(t) + B x_2(t) 
+	+ 
+	\int_{t_1}^{t_2}
+	\frac{
+	e^{-\gamma(t-t')}
+	\sin \left[
+	\sqrt{\omega_0^2 - \gamma^2} (t-t')
+	\right]
+	F(t')
+	}{
+	\sqrt{\omega_0^2 - \gamma^2}
+	}
+	dt' \ ,
+	\label{eq:gen:sol}
+\end{align}
+where $x_{1,2}(t)$ are solutions to the \emph{homogeneous} differential equation, that is (\ref{eq:ODE}) with $F(t)=0$. 
+%
+Recall that we may take the upper limit of integration to be $t_2 = t$. The lower limit, $t_1$ can be taken to be the time at which the driving force is applied. 
+
+\subsubsection{Initial Conditions}
+
+The coefficients $A$ and $B$ are determined by the initial conditions of the problem. 
+%
+Even without knowing the precise form of $x_{1,2}(t)$, we know that for a specific initial condition (say, at $t_1$), the coefficients $A$ and $B$ vanish. What are the initial conditions for which this is true? Specify $x(t_1)$ and $\dot x(t_1)$. You should answer this by thinking about it physically, and confirm your intuition by looking at (\ref{eq:gen:sol}) to see that it makes sense. In a complete sentence (using words, not equations), explain the state of the system at $t=t_1$. 
+
+\subsubsection{Exponentially falling blip}
+
+For simplicity, set $t_1 = 0$. Suppose that the time-dependent force is
+\begin{align}
+	F(t) = F_0 e^{-\alpha t} \ .
+\end{align}
+Assume the initial conditions above for which $A=B=0$. Solve (\ref{eq:gen:sol}) by performing the integral. No need to do anything fancy like a contour integral. You may find it useful to write the sine as a sum of exponentials. Show that the solution is
+\begin{align}
+	x(t) = \frac{F_0}{\sqrt{\omega_0^2 - \gamma^2}}
+	\frac{\sin\left[ \sqrt{\omega_0^2 - \gamma^2} t - \delta \right]}{\sqrt{\omega_0^2 +\alpha^2 - 2\alpha \gamma}}
+	e^{-\gamma t}
+	+
+	\frac{F_0}{\omega_0^2 + \alpha^2 - 2\alpha\gamma} e^{-\alpha t} \ .
+	\label{eq:sol:f:exp}
+\end{align}
+Here we've defined
+\begin{align}
+	\tan \delta = \frac{\sqrt{\omega_0^2 - \gamma^2}}{\alpha - \gamma} \ .
+\end{align}
+If you don't believe this solution, check it by plugging into (\ref{eq:ODE}). Write out the limiting form when the damping goes to zero, $\gamma \to 0$. Show that in the limit of negligible damping and for `late times', that
+\begin{align}
+	x(t) = \frac{F_0}{\omega_0}\frac{\sin (\omega_0 t -\delta)}{\sqrt{\omega_0^2 + \alpha^2}} \ .
+\end{align}
+What does `late times' mean in this context? Identify the quantity with dimension $T$ (time) that you can use to define `late.' What does this mean physically? Explain what's happening as one of the terms in (\ref{eq:sol:f:exp}) vanishes.
+
+\subsubsection{Energy of the system}
+
+If the system initially has zero energy---confirm that this is consistent with the boundary conditions that set $A=B=0$---show that the energy of the system at late times is
+\begin{align}
+	E = \frac{F_0^2}{2(\omega_0^2 + \alpha^2)}\ .
+\end{align}
+\textsc{Hint}: recall that the energy for the system is $E = \frac 12 \dot x^2 + \frac 12 \omega_0^2 x^2$.
+
+
+
+
+
+\section*{Extra Credit}
+
+These problems are not graded and are for your edification. You are strongly encouraged to explore and discuss these topics, especially if they are in a field of interest to you.
+
+
+\subsection*{Curriculum Vitae}
+\emph{I strongly encourage you to do this.} Write a curriculum vitae. I suggest using a \LaTeX\, template, e.g. from \url{https://www.overleaf.com/gallery/tagged/cv} . For more information about what a CV is versus a resume, see \url{https://gradschool.cornell.edu/academic-progress/pathways-to-success/prepare-for-your-career/take-action/resumes-and-cvs/}
+
+
+\subsection*{A future CV}
+
+Take your CV from the previous problem. Remove your name, this is no longer a CV about you. Imagine a hypothetical graduate student nearing completion. The hypothetical graduate student has the same initial condition as you---so their CV looked just like yours in their first year at UCR. Now fill in the CV with the kinds of accomplishments (feel free to make up paper titles and collaborators) that make this hypothetical graduate student an excellent candidate for the types of positions you envision after graduate school. Feel free to ask for advice from more senior people in your field.
+
+
+
+
+\end{document}

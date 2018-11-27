@@ -1,0 +1,632 @@
+\documentclass[12pt]{article}
+%% arXiv paper template by Flip Tanedo
+%% last updated: Dec 2016
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  THE USUAL PACKAGES  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{nopageno}
+\usepackage{enumerate}
+\usepackage{parskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  UNUSUAL PACKAGES        %%%%
+%%%  Uncomment as necessary. %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% MATH AND PHYSICS SYMBOLS
+%% ------------------------
+%\usepackage{slashed}       % \slashed{k}
+%\usepackage{mathrsfs}      % Weinberg-esque letters
+%\usepackage{youngtab}	    % Young Tableaux
+%\usepackage{pifont}        % check marks
+\usepackage{bbm}           % \mathbbm{1} incomp. w/ XeLaTeX 
+%\usepackage[normalem]{ulem} % for \sout
+
+
+%% CONTENT FORMAT AND DESIGN (below for general formatting)
+%% --------------------------------------------------------
+\usepackage{lipsum}        % block of text (formatting test)
+%\usepackage{color}         % \color{...}, colored text
+%\usepackage{framed}        % boxed remarks
+%\usepackage{subcaption}    % subfigures; subfig depreciated
+%\usepackage{paralist}      % compactitem
+%\usepackage{appendix}      % subappendices
+%\usepackage{cite}          % group cites (conflict: collref)
+%\usepackage{tocloft}       % Table of Contents	
+
+%% TABLES IN LaTeX
+%% ---------------
+%\usepackage{booktabs}      % professional tables
+%\usepackage{nicefrac}      % fractions in tables,
+%\usepackage{multirow}      % multirow elements in a table
+%\usepackage{arydshln} 	    % dashed lines in arrays
+
+%% Other Packages and Notes
+%% ------------------------
+%\usepackage[font=small]{caption} % caption font is small
+
+
+
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  PAGE FORMATTING and (RE)NEW COMMANDS  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[margin=2cm]{geometry}   % reasonable margins
+
+\graphicspath{{figures/}}	        % set directory for figures
+
+% for capitalized things
+\newcommand{\acro}[1]{\textsc{\MakeLowercase{#1}}}    
+
+\numberwithin{equation}{subsection}    % set equation numbering
+\renewcommand{\tilde}{\widetilde}   % tilde over characters
+\renewcommand{\vec}[1]{\mathbf{#1}} % vectors are boldface
+
+\newcommand{\dbar}{d\mkern-6mu\mathchar'26}    % for d/2pi
+\newcommand{\ket}[1]{\left|#1\right\rangle}    % <#1|
+\newcommand{\bra}[1]{\left\langle#1\right|}    % |#1>
+\newcommand{\Xmark}{\text{\sffamily X}}        % cross out
+
+
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+  \olditemize
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+
+% Commands for temporary comments
+\newcommand{\comment}[2]{\textcolor{red}{[\textbf{#1} #2]}}
+\newcommand{\flip}[1]{{\color{red} [\textbf{Flip}: {#1}]}}
+\newcommand{\email}[1]{\texttt{\href{mailto:#1}{#1}}}
+
+\newenvironment{institutions}[1][2em]{\begin{list}{}{\setlength\leftmargin{#1}\setlength\rightmargin{#1}}\item[]}{\end{list}}
+
+
+\usepackage{fancyhdr}		% to put preprint number
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%%%  HYPERREF  %%%%
+%%%%%%%%%%%%%%%%%%%
+
+%% This package has to be at the end; can lead to conflicts
+\usepackage{microtype}
+\usepackage[
+	colorlinks=true,
+	citecolor=black,
+	linkcolor=black,
+	urlcolor=green!50!black,
+	hypertexnames=false]{hyperref}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%  TITLE DATA  %%%%
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+
+    {\Large \textsc{Homework 5b:} 
+    \textbf{Extra Dimensions} (Optional)}
+    
+\end{center}
+
+\vskip .4cm
+
+\noindent
+\begin{tabular*}{\textwidth}{rlcrll}
+	\textsc{Course:}& Physics 231, \emph{Methods of Theoretical Physics} (2018)
+	&
+%	\hspace{1.2cm}
+	&
+	\\
+	\textsc{Instructor:}& Professor Flip Tanedo (\email{flip.tanedo@ucr.edu})
+	&
+	%\hfill
+	&
+	& 
+	\\
+	\textsc{Due by:}& \emph{Friday}, Dec 7
+	&
+	%\hfill
+	&
+	%	
+\end{tabular*}
+
+
+This homework is encouraged, but optional.
+
+
+\subsection{The Wave Equation in (3+1) Dimensions}
+\label{problem:wave:eq:3d}
+
+We solve for the Green's function of wave equation for electromagnetism: 
+\begin{align}
+	\left[\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \frac{\partial^2}{\partial \vec{r}^2}\right] 
+	\varphi(\vec{r},t) &= \rho(\vec{r},t)
+	&
+	\left[\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \frac{\partial^2}{\partial \vec{r}^2}\right]
+	\vec A(\vec{r},t) &= \vec j(\vec{r},t) \ .
+	\label{eq:EM:wave}
+\end{align}
+We make the speed of light, $c$, explicit and have chosen \textbf{Lorentz gauge} and are working in vacuum, $\varepsilon_0 = \mu_0 = 1$. 
+%
+You should recognize all the physical quantities here. 
+% 
+Use spacetime coordinates such that $x = (ct,\vec r)$. Define the 4-vector potential $A_\mu(x) = \left(\varphi(x),\vec A(x)\right)$, where $x$ is a point in Minkowski space. Let $G(x,x')$ be the Green's function for each component of $A_\mu$. 
+%
+This means that the potential is given by
+\begin{align}
+	A_\mu(x) = \int d^4x \, G(x,x') \, j_\mu(x') \ .
+\end{align}
+Make sure you're comfortable with the indices\footnote{Be able to answer the following questions for yourself: Why doesn't $G(x,x')$ have indices? Why shouldn't it be a 4-component object or a matrix?}. 
+
+In comparison to what we did in lecture, we'll keep factors of $c$ explicit and will write out the space and time components separately rather than writing $\partial^2 = \partial_t^2 -\partial_x^2 -\partial_y^2 -\partial_z^2$.
+
+
+
+
+\subsubsection{Fourier Transform}
+
+The Green's function equation for each component is
+\begin{align}
+	\left[\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \frac{\partial^2}{\partial \vec{r}^2}\right] G(x,x') = \delta^{(4)}(x-x') \equiv \delta(x-x')\delta(y-y')\delta(z-z')\delta(t-t') \ .
+	\label{eq:4D:define:G}
+\end{align}
+We write the Fourier transform in Minkowski space \emph{covariantly}:
+\begin{align}
+	\tilde G(k,x') &= \int d^4x \, e^{ik\cdot x} G(x,x')
+	&
+	G(x,x') &= \int \dbar^4k \, e^{-ik\cdot x} \tilde G(k,x') \ ,
+\end{align}
+where we use the notation $\dbar = d/2\pi$. Further, $k = (E/c,\vec k)$ and we recall that $k\cdot x \equiv k_\mu x^\mu = Et - k_x x - k_y y - k_z z$. 
+%\textcolor{green!50!black}{[\textsc{Update 11/27}: you may find it useful to think of this as $k\cdot x \equiv (E/c)(ct) - \vec k\cdot \vec x$.} 
+Why is $k_0$ identified $E$? If you're not sure, wait until later and see what $E$ is fixed to be. 
+%\textcolor{green!50!black}{[\textsc{Update 11/27}: note that $\dbar^4k = (dE/c)d^3\vec{k} (2\pi)^{-4}$]}
+
+Solve for $\tilde G(k,x')$. It should look very similar, perhaps with factors of $c$ as required by dimensional analysis.  Write $G(x,x')$ as a 4D integral over $\tilde G(k,x')$.
+
+\textsc{Hint:} It may be useful to recall that $\delta^{(4)}(x)$ has the following Fourier transform: 
+\begin{align}
+	\delta^{(4)}(x-x') &= \int \dbar^4 k e^{-ik\cdot (x-x')} \ .
+\end{align}
+%\textcolor{green!50!black}{[\textsc{Update 11/27}: Note that $\delta^{(4)}(x) = \delta(ct)\delta^{3}(\vec{x})$. Similarly, $\delta^{(4)}(k) = \delta(E/c)\delta^{3}(\vec{k})$. This is consistent with the definition of the volume element and the dot product. }
+
+\textsc{Answer:} You will find
+\begin{align}
+	G(x,x') = \int \dbar^4k \, \frac{c^2}{c^2 \vec k^2 - E^2} e^{-ik\cdot (x-x')} \ .
+	\label{eq:G:ft:1}
+\end{align} 
+Observe that $G(x,x') = G(x-x')$, as we expect from spacetime translation invariance.
+
+
+
+\subsubsection{Angular integrals in hyper-cylindrical coordinates}
+
+For convenience, write $y \equiv x-x' = (cu,\mathbf{s})$. This means that $u$ is a shifted time coordinate and $\vec s$ is a shifted spatial 3-vector. Note that $d^4x = d^4 y$. In order to integrate (\ref{eq:G:ft:1}), use 4D `hyper-cylindrical coordinates' over $k$ where time/energy is treated linearly and the space/momentum directions are treated in 3D spherical coordinates, $|\vec k|$, $\cos \theta$, and $\varphi$. Recall that $\theta$ is the azimuthal angle with respect to the $k_z$-axis. The volume element in these coordinates is
+\begin{align}
+	d^4 k = dE \, d^3\vec k = |\vec k|^2 \,dE \,  d|\vec k| \, d\cos \theta \, d\varphi \ .
+\end{align}
+%\textcolor{green!50!black}{[\textsc{Update 11/27}: Corrected $dE/c$ factor in above equation.]}
+
+Since we integrate over all values of $k^\mu$, we are free to align our axes however we want. A particularly convenient choice is to align $k_z$ to be aligned with $\vec s$. In this case, $\vec k \cdot \vec s = ks \cos \theta$, where it should be understood that $k$ and $s$ are magnitudes of the spatial $3$-vectors\footnote{That is, from now on I write $k = |\vec k|$. There should not be any ambiguity with the 4-vector, $k^2 = E^2/c^2 - \vec k^2$, which no longer shows up in our expressions.}.
+%
+Then we have
+\begin{align}
+	-ik\cdot y = i k s \cos \theta  - i E u \ .
+\end{align}
+Perform the angular integrals in (\ref{eq:G:ft:1}).  Show that this gives
+\begin{align}
+	G(y) = \frac{1}{4\pi^3 s} \int_0^\infty k\,\sin ks 
+	\left(
+	 \int_{-\infty}^\infty \frac{c^2}{c^2k^2 - E^2} e^{-iE u} dE
+	\right) \, dk \ .
+	\label{eq:G:cauchy:P:problem}
+\end{align}
+%\textcolor{green!50!black}{[\textsc{Update 11/27}: Corrected $dE/c$ factor in above equation.]}
+
+
+
+
+
+\subsubsection{Practical Pole Pushing for Poor Physics People}
+
+The $dE$ integral in parenthesis in (\ref{eq:G:cauchy:P:problem}) looks very familiar. We evaluate it using a contour integral. Identify the location of the two poles in the complex $E$ plane.
+%
+You're already an expert on this integral.
+%
+You have a choice of contours: $\mathcal C_+$ in the upper half plane and $\bar{\mathcal C}_-$ in the lower half plane. These are parameterized by:
+\begin{align}
+	\mathcal C_+ &: \quad z = Re^{i\theta} \qquad  0 < \theta < \pi \\
+	-{\mathcal C}_- &: \quad z = Re^{i\theta} \qquad \pi < \theta < 2 \pi \ ,
+\end{align}
+where in each case we take $R\to \infty$.
+Comment on which contour one should choose depending on the sign of $u\equiv t-t'$.
+
+Now we have to pick a prescription for how to navigate the poles. There are two physically-motivated choices: one can push the poles into the upper half plane and into the area enclosed by $\mathcal C_+$, or one can push the poles into the lower half plane and into the area enclosed by $-{\mathcal C}_-$. Which one corresponds to the causal case? Perform the $dE$ integral for this case.
+
+
+\subsubsection{The Green's Function}
+
+You now have $G(y)$ as a single integral over $dk$. Go ahead and perform this integral. 
+
+\textsc{Hints}: Use, once again, the fact that $\int e^{ikx} dk = 2\pi \delta(x)$. The most straightforward calculation involves writing the solution to the $dE$ integral as a sum of exponentials rather than a sine. 
+
+\textsc{Intermediate step}: It is useful to show that
+\begin{align}
+	\int_{-\infty}^\infty \frac{-e^{-i(E/c)(cu)}}{[(E/c)- k - i\varepsilon][(E/c)+k - i\varepsilon]}  dE = 
+	\frac{-i\pi c}{k} \left(e^{icku}-e^{-icku}\right) \ .
+\end{align}
+It may be useful to define a variable $\mathcal E = E/c$.]
+%
+Another useful tip is to use
+\begin{align}
+	\int_0^\infty \left(e^{ikX} + e^{-ikX}\right) dk = 
+	\int_{-\infty}^\infty e^{ikX} dk=
+	2\pi \delta(X)
+	 \ .
+\end{align}
+
+
+\textsc{Intermediate Step}: Writing $s = |\vec s|$, you should find:
+\begin{align}
+	G^{(r)}(y) &=
+	\frac{c}{4\pi r}
+	\left\{
+	\begin{array}{ll}
+%		\frac{c}{4\pi r} 
+%		\left[
+		\delta(s-cu) - \delta(s+cu)
+%		\right]
+		&
+		\quad\text{if $u=t-t' \geq 0$}
+		\\
+		0 & \quad\text{if $u=t-t' <0$} \ .
+	\end{array}
+	\right.
+	\label{eq:Gr:Gs}
+\end{align}
+Then observe that the radial coordinate $s\geq 0$ so that one of the $\delta$ functions in each expression will always be zero. 
+
+\textsc{Answer}:
+Taking $x' = 0$ so that $u=t$ and $s = r$, the final expression is:
+\begin{align}
+	G^{(r)}(x) = \frac{c}{4\pi r} \delta(r-ct) \Theta(t) \ .
+	\label{eq:3d:G}
+\end{align}
+The physical interpretation is that the Green's function solves the electromagnetic wave equation for a `blip' impulse at $t=0$ and $\vec{r} = 0$. 
+
+
+
+
+ 
+
+
+
+
+
+\subsection{The Wave Equation in Flatland}
+
+There's a fantastic novella written in 1884 called \emph{Flatland: A Romance of Many Dimensions}\footnote{\url{https://en.wikipedia.org/wiki/Flatland}; see also \url{http://www.geom.uiuc.edu/~banchoff/Flatland/}}. It is a story about a 2+1 dimensional universe that doubled as a social commentary. In this problem, we explore electromagnetic waves in such a universe. 
+
+\textsc{Note}: We walked through most of this problem in Lecture 20, feel free to follow along with the lecture notes.
+
+%\subsection{Green's Function: set up}
+
+We follow the same procedure as the previous problem.
+\begin{align}
+	\left[\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \frac{\partial^2}{\partial \vec{r}^2}\right] 
+	\varphi(\vec{r},t) &= \rho(\vec{r},t)
+	&
+	\left[\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \frac{\partial^2}{\partial \vec{r}^2}\right]
+	\vec A(\vec{r},t) &= \vec j(\vec{r},t) \ .
+	\label{eq:EM:wave}
+\end{align}
+The Green's function for each component is:
+\begin{align}
+	\left[\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \frac{\partial^2}{\partial \vec{r}^2}\right] G(x,x') = \delta^{(3)}(x-x') \equiv \delta(x-x')\delta(y-y')\delta(t-t') \ .
+	\label{eq:HO:in:3d}
+\end{align}
+
+\subsubsection{Fourier Transform}
+
+Solve for the Green's function using a Fourier transform,
+\begin{align}
+	\tilde G(k,x') &= \int d^3x \, e^{ik\cdot x} G(x,x')
+	&
+	G(x,x') &= \int \dbar^3k \, e^{-ik\cdot x} \tilde G(k,x') \ ,
+\end{align}
+where continue to use the notation $\dbar = d/2\pi$. Further, $k = (E/c,\vec k)$ and we recall that $k\cdot x \equiv k_\mu x^\mu = Et - k_x x - k_y y$. Also note the $\delta$ function in 3-space: $\delta^{(3)}(x-x') = \int \dbar^3 k e^{-ik\cdot (x-x')}$ \ .
+
+\textsc{Answer:} It should be no surprise to you at all that you end up with the following:
+\begin{align}
+	G(x,x') = \int \dbar^3k \, \frac{c^2}{c^2 \vec k^2 - E^2} e^{-ik\cdot (x-x')} \ .
+	\label{eq:G:ft}
+\end{align} 
+
+
+\subsubsection{Something familiar}
+
+For convenience, write $y \equiv x-x' = (cu,\mathbf{s})$. Check that it is still true that
+\begin{align}
+	-ik\cdot y = i k s \cos \theta  - i E u \ .
+\end{align}
+Unlike Problem~\ref{problem:wave:eq:3d}, however, our integration measure is
+\begin{align}
+	d^3 k = dE \, d^2\vec k = |\vec k| \,dE \,  d|\vec k| \, d \theta  \ .
+\end{align}
+\textsc{Warning:} At this stage, you have plenty of options for which integral to do first. Mathematically, it doesn't matter which order you do them---but some paths have more tedious integrals than others. I'm going to give hints for doing the integrals in the following order: $dE$, $d|\vec k|$, $d\theta$. 
+
+
+Go ahead and perform the $dE$ integral for the case of the retarded Green's function. \textsc{Hint}: hey, haven't you done this \emph{exact} integral before? 
+
+\textsc{Answer}:
+\begin{align}
+\int dE \frac{e^{-iEt}}{c|\vec k|^2 -E^2}
+&=
+\frac{-i\pi}{c|\vec k|} 
+\left(
+e^{ic|\vec k| t}
+-
+e^{-ic|\vec k| t}
+\right) \ .
+\label{eq:dE}
+\end{align}
+
+\textsc{Comment}: At this point, you might want to make a mental note of where $i\varepsilon$'s would be if we were keeping track of them.
+
+\subsubsection{The $d|\vec k|$ integral}
+
+Now perform the $d\theta$ integral. I suggest doing this the following way: write the result of (\ref{eq:dE}) into a sine function. Then use the relation
+\begin{align}
+	\int_0^\infty e^{iAk}\sin(ckt)\, dk = \frac{ct}{-A^2 + c^2t^2} \ .
+\end{align}
+\textsc{Remark:} This is a slightly mathematically dubious step which is okay if we judiciously kept track of the $i\varepsilon$. Specifically, this only holds when $t > r|\cos\theta|$. We'll be sloppy about this for now, we'll see the actual constraints come out more cleanly below.
+
+\textsc{Answer}: You will find:
+\begin{align}
+	G(y) = \frac{1}{(2\pi)^2} \int d\theta \frac{ct}{c^2t^2 - r^2\cos^2\theta} \ .
+\end{align}
+
+\subsubsection{The angular integral}
+
+A useful trick here is to use
+\begin{align}
+	\int_0^{2\pi} \frac{d\theta}{1-B\cos^2\theta} = 2\pi \sqrt{\frac{1}{1-B}} \ .
+\end{align}
+This only holds when $B<1$. 
+
+\textsc{Answer}: You will find
+\begin{align}
+	G(y) = \frac{1}{2\pi} \frac{c}{\sqrt{c^2 t^2 - s^2}} \ ,
+	\label{eq:2d:G:hardway}
+\end{align}
+with the caveat that $c^2t^2 > s^2$. Convince yourself that this makes sense from the point of view of causality.
+
+
+\subsubsection{Dimensional Reduction}
+
+% Now do it the Appel way.
+
+The result (\ref{eq:2d:G:hardway}) solves the problem. 
+%
+There's actually a much nicer way to get the lower-dimensional Green's function from a higher-dimensional Green's function. 
+
+Prove that 
+\begin{align}
+	G(x,y,t) = \int_{-\infty}^\infty G_{(3)}(x,y,z,t) \, dz \ ,
+	\label{eq:G:from:G3}
+\end{align}
+where $G_{(3)}$ is the (3+1)-dimensional Green's function, (\ref{eq:3d:G}). In other words: one can derive the (2+1)-dimensional Green's function by integrating over the third dimension.
+
+We prove this result without using the explicit form of $G_{(3)}(x,y,z,t)$, just the defining relation (\ref{eq:4D:define:G}). Write the right-hand side of (\ref{eq:G:from:G3}) as a Fourier transform, then do the $dz$ integral:
+\begin{align}
+	\int_{-\infty}^\infty dz G_{(3)}(x,y,z,t)dz
+	&=
+	\int \dbar^4k \,
+	\left[dz\; e^{ikz} \tilde G_{(3)}(E,k_x, k_y, k_z)\right]
+	 e^{-iEt} e^{i(k_xx + k_y y)} \ .
+\end{align}
+The $dz$ integral is just an inverse Fourier transform that gives $2\pi\delta(k_z)$. Perform the $k_z$ integral to write the right-hand side of (\ref{eq:G:from:G3}) in the form of a (2+1)-dimensional Fourier transform: $\int \dbar^3 k \, \tilde{\mathfrak{g}}e^{-iEt}e^{i(k_xx+k_yy)}$. 
+
+Writing $\tilde{\mathfrak{g}}$ as the Fourier transform of the right-hand side of (\ref{eq:G:from:G3}), show that (\ref{eq:4D:define:G}) implies
+\begin{align}
+	\left(E^2 - k_x^2 - k_y^2\right) \tilde{\mathfrak{g}} = 1\ ,
+\end{align}
+thus proving that $\tilde{\mathfrak{g}}$ is the Fourier transform of the (2+1)-dimensional Green's function.
+
+\subsubsection{Dimensional Reduction: explicit result}
+
+For the retarded Green's function in (3+1)-dimensions, we found
+\begin{align}
+	G_{(3)}(\vec r,t) &= \frac{c}{4\pi r} \delta(r-ct)
+	&
+	\text{for } t&>0 \ ,
+\end{align}
+and zero for $t<0$. Integrate this expression over $dz$ to obtain the (2+1)-dimensional Green's function, $G(x,y,t)$,
+\begin{align}
+	G(x,y,t) &= \frac{c}{4\pi} \int_{-\infty}^\infty 
+	\frac{1}{\sqrt{x^2+y^2 + z^2}} \delta\left(\sqrt{x^2+y^2 + z^2} - ct\right) \, dz \ .
+\end{align}
+
+\textsc{Hint:} you have one integral to do, but fortunately you have a $\delta$-function to do it. The only problem is that the $\delta$ function is of the form $\delta\left(f(z)\right)$. One way to solve this is to do a change of variables to $w = \sqrt{x^2+y^2+z^2}$ so that the $\delta$-function is of the form $\delta(w-ct)$. Doing this more generally gives a convenient rule,
+\begin{align}
+	\delta\left(f(z)\right) &= \sum_{z_i} \frac{1}{|f'(z_i)|} \delta(z-z_i)
+	&
+	z_i \text{ such that } f(z_i) = 0 \ .
+\end{align}
+
+\textsc{Answer:} The retarded Green's function is:
+\begin{align}
+	G(x,y,t)  &= 
+	\left\{
+	\begin{array}{ll}
+		\frac{c}{2\pi} \frac{1}{\sqrt{c^2 t^2 - x^2 - y^2}}
+		& \text{if } c^2t^2 > x^2 + y^2\\
+		0 & \text{otherwise}
+	\end{array}
+	\right. \ .
+\end{align}
+
+
+\subsubsection{Discussion: The Odd Electrodynamics of Flatland}
+
+Sketch $G(r,t)$ as a function of $r = \sqrt{x^2 + y^2}$ for two values of $t$. Compare this to the corresponding plot for $G_{(3)}(r,t)$. 
+
+Think about how strange this lower-dimensional universe is! In our universe, if you used a flash camera in the dark, the each part of the room would light up for a brief instant corresponding to when the photons from the flash reaches each part of the room. In this lower-dimensional universe, $G(r,t)$ is telling us that the entire room remains illuminated for an \emph{infinite} amount of time with a rapidly decreasing (but never strictly zero) intensity.
+
+
+
+
+
+
+
+
+
+
+
+\appendix
+\section*{\Large Extra Credit}
+
+
+These problems are not graded and are for your edification. You are strongly encouraged to explore and discuss these topics, especially if they are in a field of interest to you.
+
+\subsection{Invariance of the Green's Function}
+
+\subsubsection{Invariance of that funny $\delta$-function}
+
+In Problem~\ref{problem:wave:eq:3d}, you might be concerned about is the covariance of the $\delta$-function with respect to Lorentz transformations. The Green's function $G(x)$ is supposed to be invariant under Lorentz transformations. However, the argument of $\delta(ct - r)$ does not appear to Lorentz invariant. As a reminder, under a Lorentz transformation $x^\mu \to \Lambda^\mu_{\phantom\mu\nu}x^\nu$ (this is matrix multiplication). However, the scalar quantity $x^2 = x_\mu x^\mu$ remains unchanged (invariant).
+
+Show that the Green's function is indeed invariant.
+
+
+\textsc{Hint:} Recall that the following rule for $\delta$-functions:
+\begin{align}
+	\delta\left(g(x)\right) &= \sum_{x_i} \frac{\delta(x-x_i)}{|g'(x_i)|}
+	&
+	g(x_i) = 0 \ .
+\end{align}
+Writing $x = (ct,\vec r)$, show that
+\begin{align}
+	\delta(x^2) = \frac{1}{2r} \left[
+	\delta(r-ct) - \delta(r+ct)
+	\right] \ .
+\end{align}
+Compare this to (\ref{eq:Gr:Gs}). 
+
+\textsc{Answer}: You will find that 
+\begin{align}
+	G^{(r)}(x) = \frac{c}{2\pi} \delta(x^2) \Theta(t)
+\end{align}
+where $\Theta(t)$ is the Heaviside step function. Argue that even though $t=x^0$ is itself not invariant, $\Theta(t)$ is invariant under any \emph{physical} Lorentz transformation. 
+
+
+\subsubsection{Discussion}
+% Appel ex. 8.9
+It turns out that when calculating matrix elements (amplitudes) for quantum mechanical scattering a relativistic particle of mass $m$ with four-momentum $p = (E,\vec p)$, you often end up with expressions in momentum space where an integrand $f(p)$ needs to be integrated over phase space in a way where the on-shell conditions are fixed:
+\begin{align}
+	p^2 &= E^2 - \vec p^2 = m^2 
+	&
+	E &>0
+	\ .
+\end{align}
+In other words: you have an integral over the four directions in momentum space, but `physicality' imposes a constraint. You should be dreaming of Lagrange multipliers\footnote{We won't use Lagrange multipliers, but a generalization of this method where the $\delta$-function is promoted to a Lagrange multiplier shows up in gauge theory and is called the Fadeev-Popov procedure.}. 
+
+What one ends up doing is writing down integrals of the form
+\begin{align}
+	\int d^4p \, \delta(p^2 - m^2) \Theta(E) f(p) \ .
+\end{align}
+This says: \emph{integrate over all of the phase space for $p^\mu$, but restrict it to positive energies and to 4-momenta that satisfy the $p^2=m^2$.}
+
+Writing $E(\vec p) = \sqrt{\vec p^2 +m^2}$, show that
+\begin{align}
+	\int d^4p \, \delta(p^2 - m^2) \Theta(E) f(p) \ .
+	& = 
+	\int \frac{d^3\vec p}{2E(\vec p)} f(E(\vec p), \vec p) \ .
+\end{align}
+This funny-looking differential element $d^3\vec p/2E(\vec p)$ doesn't look Lorentz invariant, but we have derived that it is. Note that in the function, $f$, we fix $E$ to be the required value by `on-shell-ness.'
+
+
+
+
+\subsection{Dimensional Regularization}
+
+% e.g. Wikipedia, Cahill
+% contour integral derivation
+% do volumes of spheres in N dimensions
+% Cahill p. 188
+
+The Euler $\Gamma$ function is a meromorphic generalization of the factorial,
+\begin{align}
+	\Gamma(z) = \int_0^\infty x^{z-1}e^{-x} dx \ .
+	\label{eq:Gamma}
+\end{align}
+For positive integers, $\Gamma(n) = (n-1)!$.
+A fact that shows up occasionally in physics that area of the unit sphere in $d$ dimensions is
+\begin{align}
+	S_d = \frac{2\pi^{d/2}}{\Gamma(d/2)} \ .
+	\label{eq:Sd}
+\end{align}
+There's always ambiguity (to me at least) when people say things like ``$d$-sphere'' ... is this a sphere embedded in $d$ dimensions whose area has units $L^{d-1}$, or is this the sphere embedded in $(d+1)$ dimension whose area has units $L^d$? What is the correct interpretation of (\ref{eq:Sd})? What is the area of the $d$-sphere of radius $r$? What is the [hyper]-volume enclosed by this sphere? (This is discussed in Cahill's textbook, around exercise 4.12.)
+
+% Cahill ex 4.12
+
+
+In physics, one often has to deal with quantifying and understanding apparent divergences in our calculations\footnote{These non-analytic results are the sign of our theory trying to tell us something.}. A systematic treatment of how to do this is usually buried deep in a course of quantum field theory, where there is a danger of confusing the physics from the mathematical techniques. In this problem we explore one such technique called \textbf{dimensional regularization} in a very simple electrostatic system. 
+
+Consider the case of an infinite line  with constant charge density $\lambda$. (This should remind you of the dimensional reduction in Problem 3!) Pick coordinates such that the charged line is along the $y$-axis, and the observer is on the $x$-axis\footnote{By rotational symmetry $x$ may as well be the radial cylindrical coordinate, $\rho$.}. Observe that the potential (an integral over the Green's function!) at $x$ is
+\begin{align}
+	V(x) = \frac{\lambda}{4\pi} \int_{-\infty}^\infty \frac{dy}{\sqrt{x^2+y^2}} \ .
+	\label{eq:Vx:1d}
+\end{align}
+Note that this integral is divergent\footnote{The expression is also scale invariant: $V(x) = V(kx)$. Think about what this means physically: an infinite line charge looks the same when you're close to it versus when you are far from it. This makes sense: you have no other length scale to compare to---thus by dimensional analysis, you have no basis to even use the words `close' or `far.'}. What does this mean and how do we make sense of quantities like $\vec E = -\nabla V$ in this case? As physicists, we deal with infinite quantities by \textbf{regulating} them: we \emph{quantify} the infinity by some parameter which allows us to compute finite physical quantities like $\vec E$ and check that those physical quantities are independent of the regulator.
+
+Regulate the $dy$ integral (\ref{eq:Vx:1d}) by converting the one-dimensional integral into a ($1-2\epsilon$)-dimensional integral, where $\epsilon$ is a small number. Don't stop to ask what this means\footnote{\url{https://www.youtube.com/watch?v=ItV8utelYlc}. You can (and should) think about what this `slightly less than one dimension' means after you see the end result.}. This means we write:
+\begin{align}
+	V(x) = \frac{\lambda}{4\pi} \int_0^\infty dy\,d\Omega_{(1-2\epsilon)} \frac{y^{-2\epsilon}}{\mu^{-2\epsilon}}\frac{1}{\sqrt{x^2+y^2}} \ ,
+\end{align}
+where $d\Omega_{(1-2\epsilon)}$ is the differential area of the unit sphere in $(1-2\epsilon)$ dimensions, the factor of $y^{-2\epsilon}$ is inserted the give the right measure for a $(1-2\epsilon)$-dimensional volume, and some \emph{arbitrary} dimensionful parameter $\mu$ has been introduced to make units work out\footnote{I am using units such that $[V] = [\lambda]$. You can put in $\epsilon_0$ as appropriate, if you really wish.}. 
+\begin{enumerate}[(a)]
+\item Show that this integral evaluates to
+\begin{align}
+	V(x) = \frac{\lambda}{4\pi} \frac{\mu^{2\epsilon}}{x^{2\epsilon}} \frac{\Gamma(\epsilon)}{\pi^\epsilon} \ .
+\end{align}
+\item Confirm that as $\epsilon\to 0$, $V(x)$ becomes ill defined. \textsc{Hint}: Recall from $\Gamma(z+1) = z \Gamma(z)$ that $\Gamma(z)$ has a simple pole at the origin.
+\item Calculate the electric field in the $x$ direction; $E_x = -\partial_xV(x)$ and show that
+\begin{align}
+	E_x = \frac{\lambda}{4\pi} \left[ \frac{2\epsilon \mu^{2\epsilon} \Gamma(\epsilon)}{\pi^\epsilon x^{1+2\epsilon}} \right] \ .
+\end{align}
+\item Take the $\epsilon \to 0$ limit and observe that $E_x = \lambda/2\pi x$, which is independent of the arbitrary scale $\mu$ and behaves the way that one expects. 
+\end{enumerate}
+
+\textsc{Hint:} Use the relation
+\begin{align}
+	\int_0^\infty \frac{y^{n-1}dy}{\sqrt{x^2+y^2}} = \frac{1}{2}\frac{\Gamma(\frac n2)\Gamma(\frac{1-n}2)}{\sqrt{\pi}}x^{n-1} \ .
+\end{align}
+This problem is worked out in \url{http://arxiv.org/abs/0812.3578}; you are strongly encouraged to read and think carefully about the entire article.
+
+
+
+
+
+
+
+\end{document}
