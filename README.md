@@ -91,32 +91,32 @@ Meng Hou,
 Yongda Zhu,  
 Jackson Kishbaugh-Maish,  
 Robert Dawson,  
-Adam Green  
+Adam Green: E&M homework  
 
 * **Wed, Nov 14**:   
-Xilin Liang,  
+Xilin Liang: Monte Carlo in HEP,  
 Michael Gordon,  
-Chen Wang,  
-William Baker  
+Chen Wang: superconductivity,  
+William Baker: red dwarfs  
 
 * **Wed, Nov 21**:  
-Nakul Gangolli,  
-Shixiong Wang,  
-Cameron Chevalier,  
-Jonathan Turner  
+Nakul Gangolli: units in astronomy,  
+Shixiong Wang: separation of variables,  
+Cameron Chevalier: quantizing gravity,  
+Jonathan Turner: sandwich, spaghetti, meatballs  
 
 * **Wed, Nov 28**:  
-Varrick Suezaki,  
-Yifan Liu,  
-Erik Loyd,  
-Zahra Sattari  
+Varrick Suezaki: paper mache the Earth,  
+Yifan Liu: quantum random walk,  
+Erik Loyd: inverse functions,  
+Zahra Sattari: EFT for cosmology  
 
 * **Wed, Dec 5**:  
-Mehrdad Phoroutan Mehr,  
-Alexander Mercaldi,  
-Brian Lee,  
-Mahdi Qezlou,  
-Mingda Guo  
+Mehrdad Phoroutan Mehr: expansion vs. inflation,  
+Alexander Mercaldi: entropy vs. gravity,  
+Brian Lee: terrible integrals,  
+Mahdi Qezlou: cosmology,  
+Mingda Guo: Int. Young Physicists' Tournament  
 
 
 ## Evaluation
@@ -155,4 +155,26 @@ These notes are provided *as is* and may have errors. They also do *not* include
 
 * Meeting 14: Q & A and Pop Talks
 
-* Meeting 15: Cauchy integral theorem.
+* Meeting 15 - 18: Cauchy integral theorem, complex analysis, analyticity, causality. (Notes from 2017 class: [11](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec11.pdf), [12](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec12.pdf), [13](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec13.pdf), [14](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec13.pdf), [14](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec14.pdf), [15](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec15.pdf), [16](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec16.pdf), [17](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec17.pdf))
+
+* Meeting 19: Dispersion relations
+
+* Meetings 20, 21: Q & A and Pop Talks
+
+* Meeting 22: [Solving for Green's Functions](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec18.pdf) (notes from 2017)
+
+* Meeting 23, 24: Q & A and Pop Talks
+
+* Meeting 25 - 26: Damped Harmonic Oscillator
+
+* Meeting 27: Q & A and Pop Talks
+
+* Meeting 28: Green's functions in 3D
+
+* Meeting 29: Some notes on statistics
+
+* Meeting 30: No meeting.
+
+* Meeting 31: Last Pop Talks
+
+* Meeting 32: So long and thanks for all the fish (review)
