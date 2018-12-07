@@ -149,13 +149,13 @@ These notes are provided *as is* and may have errors. They also do *not* include
 
 * [Meeting 10-11](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec10.pdf) [(Additional)](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec11.pdf): Constructing Green's functions of self-adjoint differential operators using (1) completeness, (2) patching.   
 
-* Meeting 12: Q & A and Pop Talks
+* Meeting 12: Q & A and Pop Talks, [Notes](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec12.pdf)
 
 * [Meeting 13](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec13.pdf): Introduction to complex analysis. Analyticity, Cauchy-Riemann equations.  
 
 * Meeting 14: Q & A and Pop Talks
 
-* Meeting 15 - 18: Cauchy integral theorem, complex analysis, analyticity, causality. (Notes from 2017 class: [11](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec11.pdf), [12](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec12.pdf), [13](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec13.pdf), [14](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec13.pdf), [14](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec14.pdf), [15](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec15.pdf), [16](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec16.pdf), [17](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec17.pdf))
+* Meeting 15 - 18: Cauchy integral theorem, complex analysis, analyticity, causality. Spotty notes: [17](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec17.pdf), [18](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec18.pdf),  (Notes from 2017 class: [11](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec11.pdf), [12](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec12.pdf), [13](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec13.pdf), [14](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec13.pdf), [14](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec14.pdf), [15](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec15.pdf), [16](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec16.pdf), [17](https://github.com/Tanedo/P231-2017/blob/master/Lectures/P231_2017_Lec17.pdf))
 
 * Meeting 19: Dispersion relations
 
@@ -165,16 +165,16 @@ These notes are provided *as is* and may have errors. They also do *not* include
 
 * Meeting 23, 24: Q & A and Pop Talks
 
-* Meeting 25 - 26: Damped Harmonic Oscillator ([HW notes](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/HW5a_notes.pdf))
+* Meeting 25 - 26: [Damped Harmonic Oscillator](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec26.pdf) ([HW notes](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/HW5a_notes.pdf))
 
 * Meeting 27: Q & A and Pop Talks
 
 * Meeting 28: [Green's functions in 3D](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec27.pdf)
 
-* Meeting 29: Some notes on statistics
+* Meeting 29: [Some notes on statistics](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec28.pdf)
 
 * Meeting 30: No meeting.
 
 * Meeting 31: Last Pop Talks
 
-* Meeting 32: So long and thanks for all the fish (review)
+* Meeting 32: So long and thanks for all the fish ([review](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/LecLast.pdf), [slideshow](https://github.com/Tanedo/Physics231-2018/blob/master/P231final.pdf))
