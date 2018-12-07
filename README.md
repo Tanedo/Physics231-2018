@@ -165,11 +165,11 @@ These notes are provided *as is* and may have errors. They also do *not* include
 
 * Meeting 23, 24: Q & A and Pop Talks
 
-* Meeting 25 - 26: Damped Harmonic Oscillator
+* Meeting 25 - 26: Damped Harmonic Oscillator ([HW notes](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/HW5a_notes.pdf))
 
 * Meeting 27: Q & A and Pop Talks
 
-* Meeting 28: Green's functions in 3D
+* Meeting 28: [Green's functions in 3D](https://github.com/Tanedo/Physics231-2018/blob/master/lectures/Lec27.pdf)
 
 * Meeting 29: Some notes on statistics
 
